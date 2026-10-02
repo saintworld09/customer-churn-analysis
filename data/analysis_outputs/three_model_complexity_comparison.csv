@@ -1,0 +1,4 @@
+model,original_predictors,change_from_previous
+Model 1 - Baseline,19,Baseline
+Model 2 - Refined,18,Removed TotalCharges_Clean
+Model 4 - Reduced Service,12,Removed seven service variables

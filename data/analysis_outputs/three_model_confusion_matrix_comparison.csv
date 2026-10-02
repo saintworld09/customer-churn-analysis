@@ -1,0 +1,5 @@
+metric,model_1_baseline,model_2_refined,model_4_reduced_service
+True Negative,926,918,916
+False Positive,109,117,119
+False Negative,165,168,176
+True Positive,209,206,198
