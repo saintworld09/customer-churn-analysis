@@ -1,0 +1,10 @@
+Contract,Tenure_Band,InternetService,PaymentMethod,customers,churned_customers,churn_rate,difference_vs_overall_pp
+Month-to-month,0–6 Months,Fiber optic,Electronic check,440,332,75.45,48.92
+Month-to-month,7–12 Months,Fiber optic,Electronic check,191,117,61.26,34.72
+Month-to-month,13–24 Months,Fiber optic,Electronic check,255,150,58.82,32.29
+Month-to-month,0–6 Months,DSL,Electronic check,209,119,56.94,30.4
+Month-to-month,25–48 Months,Fiber optic,Electronic check,286,140,48.95,22.41
+Month-to-month,0–6 Months,DSL,Mailed check,192,87,45.31,18.78
+Month-to-month,25–48 Months,Fiber optic,Bank transfer (automatic),102,42,41.18,14.64
+Month-to-month,49–72 Months,Fiber optic,Electronic check,135,50,37.04,10.5
+Month-to-month,25–48 Months,Fiber optic,Credit card (automatic),102,33,32.35,5.82
