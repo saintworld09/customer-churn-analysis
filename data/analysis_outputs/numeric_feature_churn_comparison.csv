@@ -1,0 +1,4 @@
+feature,churned_average,active_average,difference_churned_minus_active
+tenure,17.98,37.57,-19.59
+MonthlyCharges,74.44,61.27,13.18
+TotalCharges_Clean,1531.8,2555.34,-1023.55

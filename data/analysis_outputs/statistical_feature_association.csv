@@ -1,0 +1,22 @@
+feature,feature_type,association_method,association_value,absolute_association,association_description
+Contract,Categorical,Cramer's V,0.4101,0.4101,Relatively strong
+Tenure_Band,Categorical,Cramer's V,0.3629,0.3629,Relatively strong
+tenure,Numerical,Point-biserial correlation,-0.3522,0.3522,Relatively strong
+OnlineSecurity,Categorical,Cramer's V,0.3474,0.3474,Relatively strong
+TechSupport,Categorical,Cramer's V,0.3429,0.3429,Relatively strong
+InternetService,Categorical,Cramer's V,0.3225,0.3225,Relatively strong
+PaymentMethod,Categorical,Cramer's V,0.3034,0.3034,Relatively strong
+OnlineBackup,Categorical,Cramer's V,0.2923,0.2923,Moderate
+DeviceProtection,Categorical,Cramer's V,0.2816,0.2816,Moderate
+StreamingMovies,Categorical,Cramer's V,0.231,0.231,Moderate
+StreamingTV,Categorical,Cramer's V,0.2305,0.2305,Moderate
+TotalCharges_Clean,Numerical,Point-biserial correlation,-0.1995,0.1995,Weak
+MonthlyCharges,Numerical,Point-biserial correlation,0.1934,0.1934,Weak
+PaperlessBilling,Categorical,Cramer's V,0.1915,0.1915,Weak
+Dependents,Categorical,Cramer's V,0.1639,0.1639,Weak
+SeniorCitizen_Status,Categorical,Cramer's V,0.1505,0.1505,Weak
+Partner,Categorical,Cramer's V,0.1501,0.1501,Weak
+MultipleLines,Categorical,Cramer's V,0.0401,0.0401,Very weak
+TotalCharges_Status,Categorical,Cramer's V,0.0197,0.0197,Very weak
+PhoneService,Categorical,Cramer's V,0.0114,0.0114,Very weak
+gender,Categorical,Cramer's V,0.0083,0.0083,Very weak

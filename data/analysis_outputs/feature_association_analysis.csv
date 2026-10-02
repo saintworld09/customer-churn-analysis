@@ -1,0 +1,51 @@
+feature,category,customers,churned_customers,churn_rate,overall_churn_rate,difference_vs_overall_pp,feature_churn_range_pp
+gender,Female,3488,939,26.92,26.54,0.38,0.76
+gender,Male,3555,930,26.16,26.54,-0.38,0.76
+SeniorCitizen_Status,Non-Senior Citizen,5901,1393,23.61,26.54,-2.93,18.08
+SeniorCitizen_Status,Senior Citizen,1142,476,41.68,26.54,15.14,18.08
+Partner,No,3641,1200,32.96,26.54,6.42,13.29
+Partner,Yes,3402,669,19.66,26.54,-6.87,13.29
+Dependents,No,4933,1543,31.28,26.54,4.74,15.83
+Dependents,Yes,2110,326,15.45,26.54,-11.09,15.83
+PhoneService,No,682,170,24.93,26.54,-1.61,1.78
+PhoneService,Yes,6361,1699,26.71,26.54,0.17,1.78
+MultipleLines,No,3390,849,25.04,26.54,-1.49,3.68
+MultipleLines,No phone service,682,170,24.93,26.54,-1.61,3.68
+MultipleLines,Yes,2971,850,28.61,26.54,2.07,3.68
+InternetService,DSL,2421,459,18.96,26.54,-7.58,34.49
+InternetService,Fiber optic,3096,1297,41.89,26.54,15.36,34.49
+InternetService,No,1526,113,7.4,26.54,-19.13,34.49
+OnlineSecurity,No,3498,1461,41.77,26.54,15.23,34.36
+OnlineSecurity,No internet service,1526,113,7.4,26.54,-19.13,34.36
+OnlineSecurity,Yes,2019,295,14.61,26.54,-11.93,34.36
+OnlineBackup,No,3088,1233,39.93,26.54,13.39,32.52
+OnlineBackup,No internet service,1526,113,7.4,26.54,-19.13,32.52
+OnlineBackup,Yes,2429,523,21.53,26.54,-5.01,32.52
+DeviceProtection,No,3095,1211,39.13,26.54,12.59,31.72
+DeviceProtection,No internet service,1526,113,7.4,26.54,-19.13,31.72
+DeviceProtection,Yes,2422,545,22.5,26.54,-4.03,31.72
+TechSupport,No,3473,1446,41.64,26.54,15.1,34.23
+TechSupport,No internet service,1526,113,7.4,26.54,-19.13,34.23
+TechSupport,Yes,2044,310,15.17,26.54,-11.37,34.23
+StreamingTV,No,2810,942,33.52,26.54,6.99,26.12
+StreamingTV,No internet service,1526,113,7.4,26.54,-19.13,26.12
+StreamingTV,Yes,2707,814,30.07,26.54,3.53,26.12
+StreamingMovies,No,2785,938,33.68,26.54,7.14,26.28
+StreamingMovies,No internet service,1526,113,7.4,26.54,-19.13,26.28
+StreamingMovies,Yes,2732,818,29.94,26.54,3.4,26.28
+Contract,Month-to-month,3875,1655,42.71,26.54,16.17,39.88
+Contract,One year,1473,166,11.27,26.54,-15.27,39.88
+Contract,Two year,1695,48,2.83,26.54,-23.71,39.88
+PaperlessBilling,No,2872,469,16.33,26.54,-10.21,17.24
+PaperlessBilling,Yes,4171,1400,33.57,26.54,7.03,17.24
+PaymentMethod,Bank transfer (automatic),1544,258,16.71,26.54,-9.83,30.04
+PaymentMethod,Credit card (automatic),1522,232,15.24,26.54,-11.29,30.04
+PaymentMethod,Electronic check,2365,1071,45.29,26.54,18.75,30.04
+PaymentMethod,Mailed check,1612,308,19.11,26.54,-7.43,30.04
+Tenure_Band,0–6 Months,1481,784,52.94,26.54,26.4,43.42
+Tenure_Band,13–24 Months,1024,294,28.71,26.54,2.17,43.42
+Tenure_Band,25–48 Months,1594,325,20.39,26.54,-6.15,43.42
+Tenure_Band,49–72 Months,2239,213,9.51,26.54,-17.02,43.42
+Tenure_Band,7–12 Months,705,253,35.89,26.54,9.35,43.42
+TotalCharges_Status,Not Recorded,11,0,0.0,26.54,-26.54,26.58
+TotalCharges_Status,Recorded,7032,1869,26.58,26.54,0.04,26.58

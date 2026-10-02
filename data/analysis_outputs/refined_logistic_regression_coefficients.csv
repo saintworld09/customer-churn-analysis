@@ -1,0 +1,45 @@
+feature,coefficient,absolute_coefficient,direction
+numeric__tenure,-0.8004173951747567,0.8004173951747567,Negative association with predicted churn
+categorical__Contract_Two year,-0.7676279401283972,0.7676279401283972,Negative association with predicted churn
+categorical__InternetService_DSL,-0.668668056474316,0.668668056474316,Negative association with predicted churn
+categorical__InternetService_Fiber optic,0.6612663426014981,0.6612663426014981,Positive association with predicted churn
+categorical__Contract_Month-to-month,0.5780790966746955,0.5780790966746955,Positive association with predicted churn
+numeric__MonthlyCharges,-0.5021487840527994,0.5021487840527994,Negative association with predicted churn
+categorical__PaperlessBilling_No,-0.3399642384697654,0.3399642384697654,Negative association with predicted churn
+categorical__DeviceProtection_No internet service,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__InternetService_No,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__OnlineSecurity_No internet service,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__TechSupport_No internet service,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__StreamingTV_No internet service,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__OnlineBackup_No internet service,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__StreamingMovies_No internet service,-0.3034994286930885,0.3034994286930885,Negative association with predicted churn
+categorical__MultipleLines_No,-0.2829816064259342,0.2829816064259342,Negative association with predicted churn
+categorical__Dependents_Yes,-0.2724425789680456,0.2724425789680456,Negative association with predicted churn
+categorical__StreamingMovies_No,-0.22712988465470715,0.22712988465470715,Negative association with predicted churn
+categorical__StreamingTV_No,-0.22709788442433435,0.22709788442433435,Negative association with predicted churn
+categorical__PaymentMethod_Credit card (automatic),-0.22628347539358953,0.22628347539358953,Negative association with predicted churn
+categorical__StreamingMovies_Yes,0.2197281707819031,0.2197281707819031,Positive association with predicted churn
+categorical__StreamingTV_Yes,0.21969617055152535,0.21969617055152535,Positive association with predicted churn
+categorical__PaymentMethod_Bank transfer (automatic),-0.19333094928135844,0.19333094928135844,Negative association with predicted churn
+categorical__PaymentMethod_Electronic check,0.1919238970450448,0.1919238970450448,Positive association with predicted churn
+categorical__gender_Female,-0.16751018897532524,0.16751018897532524,Negative association with predicted churn
+categorical__Partner_No,-0.16612723505817253,0.16612723505817253,Negative association with predicted churn
+categorical__OnlineSecurity_Yes,-0.1585118458647209,0.1585118458647209,Negative association with predicted churn
+categorical__PhoneService_Yes,-0.15712778214224724,0.15712778214224724,Negative association with predicted churn
+categorical__PhoneService_No,-0.1537733604236564,0.1537733604236564,Negative association with predicted churn
+categorical__MultipleLines_No phone service,-0.1537733604236564,0.1537733604236564,Negative association with predicted churn
+categorical__OnlineSecurity_No,0.15111013199190668,0.15111013199190668,Positive association with predicted churn
+categorical__Partner_Yes,-0.1447739075077289,0.1447739075077289,Negative association with predicted churn
+categorical__gender_Male,-0.1433909535905559,0.1433909535905559,Negative association with predicted churn
+categorical__TechSupport_Yes,-0.13185148490991164,0.13185148490991164,Negative association with predicted churn
+categorical__MultipleLines_Yes,0.12585382428369363,0.12585382428369363,Positive association with predicted churn
+categorical__TechSupport_No,0.12444977103711667,0.12444977103711667,Positive association with predicted churn
+categorical__Contract_One year,-0.12135229911223258,0.12135229911223258,Negative association with predicted churn
+categorical__PaymentMethod_Mailed check,-0.08321061493599173,0.08321061493599173,Negative association with predicted churn
+numeric__SeniorCitizen,0.05353981129287339,0.05353981129287339,Positive association with predicted churn
+categorical__DeviceProtection_No,-0.04489348094929768,0.04489348094929768,Negative association with predicted churn
+categorical__Dependents_No,-0.0384585635978646,0.0384585635978646,Negative association with predicted churn
+categorical__DeviceProtection_Yes,0.037491767076489074,0.037491767076489074,Positive association with predicted churn
+categorical__PaperlessBilling_Yes,0.029063095903840205,0.029063095903840205,Positive association with predicted churn
+categorical__OnlineBackup_Yes,-0.027894560185308483,0.027894560185308483,Negative association with predicted churn
+categorical__OnlineBackup_No,0.020492846312499535,0.020492846312499535,Positive association with predicted churn

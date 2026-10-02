@@ -1,0 +1,2 @@
+model,test_rows,accuracy,precision,recall,f1_score,roc_auc,true_negative,false_positive,false_negative,true_positive
+Refined Logistic Regression,1409,0.7977,0.6378,0.5508,0.5911,0.8391,918,117,168,206
