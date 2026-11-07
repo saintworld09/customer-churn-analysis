@@ -1,0 +1,27 @@
+table 'Service Churn Comparison'
+	lineageTag: 1d13a7e0-32d0-4f69-a57e-ce08b0a0c548
+
+	column Service
+		lineageTag: 5d631257-1d14-418d-ba33-c867fcbce1f2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Service]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Service Churn Comparison' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Service", STRING,
+				    {
+				        {"Online Security"},
+				        {"Tech Support"},
+				        {"Online Backup"},
+				        {"Device Protection"}
+				    }
+				)
+
+	annotation PBI_Id = 8ee19d0555284fe4b76f0e7155285d11
+

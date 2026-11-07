@@ -1,0 +1,234 @@
+table Customer_Churn
+	lineageTag: 5893284c-ef02-4480-b511-a89c48542457
+
+	column customerID
+		dataType: string
+		lineageTag: e1ea4e56-5d66-450f-ab7e-1e90a65565d6
+		summarizeBy: none
+		sourceColumn: customerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: f2595640-a771-47f4-834e-cbdb273ce5ca
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeniorCitizen
+		dataType: int64
+		formatString: 0
+		lineageTag: acad8c23-2723-4473-af25-0df1feadebf2
+		summarizeBy: none
+		sourceColumn: SeniorCitizen
+
+		annotation SummarizationSetBy = Automatic
+
+	column Partner
+		dataType: string
+		lineageTag: 184275dd-d494-4987-9734-90bfdef0cff9
+		summarizeBy: none
+		sourceColumn: Partner
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dependents
+		dataType: string
+		lineageTag: ca1b290b-84a6-49c3-8272-390e10614ce7
+		summarizeBy: none
+		sourceColumn: Dependents
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure
+		dataType: int64
+		formatString: 0
+		lineageTag: 31cd054d-a4fd-458b-a14e-c14669f45390
+		summarizeBy: none
+		sourceColumn: tenure
+
+		annotation SummarizationSetBy = Automatic
+
+	column PhoneService
+		dataType: string
+		lineageTag: 6e8fee61-6f0d-4111-b2ce-d082ae2f2179
+		summarizeBy: none
+		sourceColumn: PhoneService
+
+		annotation SummarizationSetBy = Automatic
+
+	column MultipleLines
+		dataType: string
+		lineageTag: c3a6d9ef-fec6-48b8-b2b3-f275d86ff1a0
+		summarizeBy: none
+		sourceColumn: MultipleLines
+
+		annotation SummarizationSetBy = Automatic
+
+	column InternetService
+		dataType: string
+		lineageTag: 364a3ffa-af73-4d26-88b2-505dd826f28f
+		summarizeBy: none
+		sourceColumn: InternetService
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnlineSecurity
+		dataType: string
+		lineageTag: bb591d7e-faad-4f93-ae6e-847dae8897a7
+		summarizeBy: none
+		sourceColumn: OnlineSecurity
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnlineBackup
+		dataType: string
+		lineageTag: 7daaef12-0220-41ed-8b2f-182a69f8a72b
+		summarizeBy: none
+		sourceColumn: OnlineBackup
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeviceProtection
+		dataType: string
+		lineageTag: adcae003-d2b5-42db-aad3-0f20dd1c8c47
+		summarizeBy: none
+		sourceColumn: DeviceProtection
+
+		annotation SummarizationSetBy = Automatic
+
+	column TechSupport
+		dataType: string
+		lineageTag: 8883b444-b438-4c18-9e46-f666021e43bd
+		summarizeBy: none
+		sourceColumn: TechSupport
+
+		annotation SummarizationSetBy = Automatic
+
+	column StreamingTV
+		dataType: string
+		lineageTag: eefbb8d1-327f-4e1e-860d-27ccaf22e61e
+		summarizeBy: none
+		sourceColumn: StreamingTV
+
+		annotation SummarizationSetBy = Automatic
+
+	column StreamingMovies
+		dataType: string
+		lineageTag: a9be1be9-a34f-40a3-99b7-e22d18328ed8
+		summarizeBy: none
+		sourceColumn: StreamingMovies
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contract
+		dataType: string
+		lineageTag: 6a59dfdc-aee3-4ef8-b2fc-520085220105
+		summarizeBy: none
+		sourceColumn: Contract
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaperlessBilling
+		dataType: string
+		lineageTag: 5de9703b-32a4-4904-a906-44cdd317184b
+		summarizeBy: none
+		sourceColumn: PaperlessBilling
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentMethod
+		dataType: string
+		lineageTag: 84b4f2fb-7fe7-412e-9bfd-3034d043babd
+		summarizeBy: none
+		sourceColumn: PaymentMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyCharges
+		dataType: double
+		lineageTag: a4c00dc2-a0ed-4e0b-be15-b9e51b9902a6
+		summarizeBy: none
+		sourceColumn: MonthlyCharges
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalCharges
+		dataType: double
+		lineageTag: d29f4537-fa7a-4f9c-b2a8-9fba609b12fb
+		summarizeBy: none
+		sourceColumn: TotalCharges
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Churn
+		dataType: string
+		lineageTag: 6cc16a01-7b54-4a0a-86c6-5ee4552794e5
+		summarizeBy: none
+		sourceColumn: Churn
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCharges_Clean
+		dataType: double
+		lineageTag: 4ec55c7e-9b04-49fa-b95c-b0032fbbe4e9
+		summarizeBy: none
+		sourceColumn: TotalCharges_Clean
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalCharges_Status
+		dataType: string
+		lineageTag: 11b6f0a4-81f1-4e02-93cf-6c19b866f3da
+		summarizeBy: none
+		sourceColumn: TotalCharges_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tenure_Band
+		dataType: string
+		lineageTag: 140f5485-cc0c-452e-98a5-53c000424f0a
+		summarizeBy: none
+		sourceColumn: Tenure_Band
+
+		annotation SummarizationSetBy = Automatic
+
+	column SeniorCitizen_Status
+		dataType: string
+		lineageTag: f09efd12-d0bb-495c-a94a-855d9373ddce
+		summarizeBy: none
+		sourceColumn: SeniorCitizen_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Churn_Flag
+		dataType: int64
+		formatString: 0
+		lineageTag: a675df2a-55ca-46ce-817c-a3bed1e2ae6c
+		summarizeBy: none
+		sourceColumn: Churn_Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customer_Churn = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\DELL\Desktop\Customer-Churn-Analytics\customer-churn-analysis\data\processed\customer_churn_clean.csv"),[Delimiter=",", Columns=26, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"customerID", type text}, {"gender", type text}, {"SeniorCitizen", Int64.Type}, {"Partner", type text}, {"Dependents", type text}, {"tenure", Int64.Type}, {"PhoneService", type text}, {"MultipleLines", type text}, {"InternetService", type text}, {"OnlineSecurity", type text}, {"OnlineBackup", type text}, {"DeviceProtection", type text}, {"TechSupport", type text}, {"StreamingTV", type text}, {"StreamingMovies", type text}, {"Contract", type text}, {"PaperlessBilling", type text}, {"PaymentMethod", type text}, {"MonthlyCharges", type number}, {"TotalCharges", type number}, {"Churn", type text}, {"TotalCharges_Clean", type number}, {"TotalCharges_Status", type text}, {"Tenure_Band", type text}, {"SeniorCitizen_Status", type text}, {"Churn_Flag", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

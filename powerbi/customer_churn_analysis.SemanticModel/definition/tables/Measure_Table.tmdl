@@ -1,0 +1,334 @@
+table Measure_Table
+	lineageTag: fdf18755-53a7-435d-8448-5f6428625db5
+
+	measure 'Total Customers' =
+			
+			COUNTROWS(Customer_Churn)
+		formatString: #,0
+		lineageTag: cb73b888-e113-4def-ad37-0fb7510421e1
+
+	measure 'Churned Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    Customer_Churn[Churn] = "Yes"
+			)
+		formatString: 0
+		lineageTag: 1364a63f-194c-42bf-a293-00bbed262595
+
+	measure 'Active Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    Customer_Churn[Churn] = "No"
+			)
+		formatString: 0
+		lineageTag: d7cde7b5-18ff-465d-84af-6cf1d00ec3dd
+
+	measure 'Churn Rate' =
+			
+			DIVIDE(
+			    [Churned Customers],
+			    [Total Customers],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: cb4f0cc1-90c9-4538-b658-05e446412436
+
+	measure 'Average Tenure' =
+			
+			AVERAGE(Customer_Churn[tenure])
+		formatString: 0.00
+		lineageTag: 54c47cca-c535-4948-9d20-a77de6749f09
+
+	measure 'Average Monthly Charges' =
+			
+			AVERAGE(Customer_Churn[MonthlyCharges])
+		formatString: 0.00
+		lineageTag: 002b0d1a-6db9-4f66-aac5-eab0fab8396a
+
+	measure 'Avg Monthly Charges - Churned' =
+			
+			CALCULATE(
+			    [Average Monthly Charges],
+			    Customer_Churn[Churn] = "Yes"
+			)
+		formatString: 0.00
+		lineageTag: 6980e884-8223-4193-89da-45b4c3ab16d0
+
+	measure 'Avg Monthly Charges - Active' =
+			
+			CALCULATE(
+			    [Average Monthly Charges],
+			    Customer_Churn[Churn] = "No"
+			)
+		formatString: 0.00
+		lineageTag: f6031a53-bf1a-4bd8-974f-5f751b926060
+
+	measure 'Highest Risk Segment Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    Customer_Churn[Contract] = "Month-to-month",
+			    Customer_Churn[Tenure_Band] = "0–6 Months",
+			    Customer_Churn[InternetService] = "Fiber optic",
+			    Customer_Churn[PaymentMethod] = "Electronic check"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ee2d650a-a6be-4f13-9c53-4a77aa1d69a9
+
+	measure 'Highest Risk Segment Reference' =
+			
+			"M2M • 0–6M • Fiber • Electronic Check"
+		lineageTag: d3dc8132-eab9-4b98-bcc1-0efc67eae801
+
+	measure 'Highest Risk Segment Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    Customer_Churn[Contract] = "Month-to-month",
+			    Customer_Churn[Tenure_Band] = "0–6 Months",
+			    Customer_Churn[InternetService] = "Fiber optic",
+			    Customer_Churn[PaymentMethod] = "Electronic check"
+			)
+		formatString: 0
+		lineageTag: a7eac4ea-6866-461e-92ee-051597ad37a3
+
+	measure 'Contract Risk Gap' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    Customer_Churn[Contract] = "Month-to-month"
+			)
+			-
+			CALCULATE(
+			    [Churn Rate],
+			    Customer_Churn[Contract] = "Two year"
+			)
+		formatString: 0.00
+		lineageTag: f67614b5-cd2e-45cf-be6e-b6f23c0355a4
+
+	measure 'Contract Risk Gap Display' =
+			
+			FORMAT(
+			    [Contract Risk Gap] * 100,
+			    "0.00"
+			) & " pp"
+		lineageTag: dcabb7ca-ad17-43b7-aef5-c3e930a2f0de
+
+	measure 'Contract Risk Gap Reference' =
+			
+			"Month-to-Month vs Two-Year"
+		lineageTag: 7d760f7d-bab3-41d4-8bb7-b555cbd5732a
+
+	measure 'Service Risk Gap' =
+			
+			VAR NoTechSupport =
+			    CALCULATE(
+			        [Churn Rate],
+			        customer_churn[TechSupport] = "No"
+			    )
+			VAR YesTechSupport =
+			    CALCULATE(
+			        [Churn Rate],
+			        customer_churn[TechSupport] = "Yes"
+			    )
+			RETURN
+			    NoTechSupport - YesTechSupport
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 22fa4204-278f-4e6c-a595-fcb0fa0fc60b
+
+	measure 'Service Risk Gap Reference' =
+			
+			"No Tech Support vs Yes Tech Support"
+		lineageTag: d979d364-57be-4af8-a19e-f40f0a6acf0f
+
+	measure 'Cramers V Value' =
+			
+			MAX(churn_association[Cramers_V])
+		lineageTag: 4b9c4abb-bcfd-4313-9a4a-0c687e835c80
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Online Security No Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[OnlineSecurity] = "No"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 800ddf18-9a14-4e9e-b71a-6cca478d4677
+
+	measure 'Online Security Yes Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[OnlineSecurity] = "Yes"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 143224d8-7247-4961-9b78-755aa0dda830
+
+	measure 'Tech Support No Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[TechSupport] = "No"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 831b18c9-ec08-4ba6-9917-a0b8a1b7d04f
+
+	measure 'Tech Support Yes Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[TechSupport] = "Yes"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: fabec4f5-382e-4b20-b236-3ed24bd6d935
+
+	measure 'Online Backup No Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[OnlineBackup] = "No"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0cf81913-4692-4e9b-916b-2651d7150179
+
+	measure 'Online Backup Yes Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[OnlineBackup] = "Yes"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bdca93ea-e37c-4c7f-8589-f629bcc0d028
+
+	measure 'Device Protection No Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[DeviceProtection] = "No"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 49d50807-f5f8-4de3-9ba8-224ce589c35f
+
+	measure 'Device Protection Yes Churn Rate' =
+			
+			CALCULATE(
+			    [Churn Rate],
+			    customer_churn[DeviceProtection] = "Yes"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 1555f21d-b094-490c-92c8-6b54c729105c
+
+	measure 'Online Security Churn Gap' =
+			
+			ABS(
+			    [Online Security No Churn Rate]
+			        - [Online Security Yes Churn Rate]
+			)
+		lineageTag: b671d53b-a9c8-4a0e-ab9c-3b36ad55d378
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tech Support Churn Gap' =
+			
+			ABS(
+			    [Tech Support No Churn Rate]
+			        - [Tech Support Yes Churn Rate]
+			)
+		lineageTag: 5df4e4e1-2c68-453b-aa76-459bbaa35751
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Online Backup Churn Gap' =
+			
+			ABS(
+			    [Online Backup No Churn Rate]
+			        - [Online Backup Yes Churn Rate]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 1e49bc34-9ef5-4888-adbe-a6b2242241ad
+
+	measure 'Device Protection Churn Gap' =
+			
+			ABS(
+			    [Device Protection No Churn Rate]
+			        - [Device Protection Yes Churn Rate]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: abd352a7-3d28-4e55-9444-58dd6a223bc4
+
+	measure 'Service Churn — Yes' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Service Churn Comparison'[Service]),
+			    "Online Security", [Online Security Yes Churn Rate],
+			    "Tech Support", [Tech Support Yes Churn Rate],
+			    "Online Backup", [Online Backup Yes Churn Rate],
+			    "Device Protection", [Device Protection Yes Churn Rate]
+			)
+		lineageTag: bd0c8100-4d67-4b82-a6d4-8f7922930b42
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Service Churn — No' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Service Churn Comparison'[Service]),
+			    "Online Security", [Online Security No Churn Rate],
+			    "Tech Support", [Tech Support No Churn Rate],
+			    "Online Backup", [Online Backup No Churn Rate],
+			    "Device Protection", [Device Protection No Churn Rate]
+			)
+		lineageTag: ee9fd022-80dc-47ac-b1a5-d51428fb717a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Churn Color' =
+			
+			SWITCH(
+			    SELECTEDVALUE(customer_churn[Churn]),
+			    "Yes", "#FFC000",
+			    "No", "#0B3041",
+			    "#FFFFFF"
+			)
+		lineageTag: 009144ed-1afc-44a6-ae27-389523db5e6f
+
+	measure 'Churn Indicator' =
+			
+			VAR ChurnStatus =
+			    SELECTEDVALUE(customer_churn[Churn])
+			
+			VAR DotColor =
+			    SWITCH(
+			        ChurnStatus,
+			        "Yes", "%23FFC000",
+			        "No", "%230B3041",
+			        "%23FFFFFF"
+			    )
+			
+			RETURN
+			    "data:image/svg+xml;utf8," &
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'>" &
+			    "<circle cx='16' cy='16' r='17' fill='" & DotColor & "'/>" &
+			    "</svg>"
+		lineageTag: bcc19322-56fa-4807-b5fa-956f016f9803
+		dataCategory: ImageUrl
+
+	column Value
+		isHidden
+		lineageTag: 97c88a4a-8af6-4965-8b01-e4de78c7fd2e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measure_Table = calculated
+		mode: import
+		source = {"Measure"}
+
+	annotation PBI_Id = d3dc85bb3f97422ba840562f3af665f5
+

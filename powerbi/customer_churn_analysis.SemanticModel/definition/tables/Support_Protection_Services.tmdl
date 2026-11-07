@@ -1,0 +1,55 @@
+table Support_Protection_Services
+	lineageTag: cf5249ef-3f85-4442-b726-b0325f06aa49
+
+	column customerID
+		dataType: string
+		lineageTag: 24c703a0-d32e-4f09-bc93-2e902eb013aa
+		summarizeBy: none
+		sourceColumn: customerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Churn
+		dataType: string
+		lineageTag: 38e8a878-248e-4f14-9f50-a438ad5846a8
+		summarizeBy: none
+		sourceColumn: Churn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Service
+		dataType: string
+		lineageTag: f075e71b-32ea-43a2-8c43-005be001ccbf
+		summarizeBy: none
+		sourceColumn: Service
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Service Status'
+		dataType: string
+		lineageTag: ceb6a782-9c9d-4509-a9bc-718c4a2f4160
+		summarizeBy: none
+		sourceColumn: Service Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Support_Protection_Services = m
+		mode: import
+		source =
+				let
+				    Source = Customer_Churn,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"gender", "SeniorCitizen", "Partner", "Dependents", "tenure", "PhoneService", "MultipleLines", "InternetService", "StreamingTV", "StreamingMovies", "Contract", "PaperlessBilling", "PaymentMethod", "MonthlyCharges", "TotalCharges", "TotalCharges_Clean", "TotalCharges_Status", "Tenure_Band", "SeniorCitizen_Status", "Churn_Flag"}),
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Removed Columns", {"customerID", "Churn"}, "Attribute", "Value"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Columns",{{"Attribute", "Service"}, {"Value", "Service Status"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Service", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","OnlineSecurity","Online Security",Replacer.ReplaceText,{"Service"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","OnlineBackup","Online Backup",Replacer.ReplaceText,{"Service"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","DeviceProtection","Device Protection",Replacer.ReplaceText,{"Service"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","TechSupport","Tech Support",Replacer.ReplaceText,{"Service"})
+				in
+				    #"Replaced Value3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

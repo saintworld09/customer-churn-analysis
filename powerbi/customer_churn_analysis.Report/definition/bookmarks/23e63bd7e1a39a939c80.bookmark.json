@@ -1,0 +1,464 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Filter Close",
+  "name": "23e63bd7e1a39a939c80",
+  "options": {
+    "targetVisualNames": [],
+    "suppressData": true,
+    "preserveNewVisualVisibility": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "e7a33dc61ac38e1272e0",
+    "sections": {
+      "e7a33dc61ac38e1272e0": {
+        "visualContainers": {
+          "1d9e991000ae85302268": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "60b89380903b23530592": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "26561e50adc70c6a50ed",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Total Customers"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2196c99e2a2b68e24052",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Churned Customers"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0d958fa8222937278b65",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Active Customers"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "eecb01e61a29c1c2d079",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Churn Rate"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "abc0f3436555046dd830",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Average Tenure"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "15fb54f003c474736a5e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Average Monthly Charges"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measure_Table"
+                        }
+                      },
+                      "Property": "Total Customers"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "06d3c34f11c3660ea032": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "196f5e03d13c0bd323d6": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "512acc0d85c3e0a40508": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "584340a0aa892e32ab2d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "62d0b0e764800eac8713": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d1d26860b4a13a986778": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "f33fcc202ba10c9d475e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "4e4580c70b1a84348073": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6815088c99777520b097": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9f8b60098ec46c18670a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2103c799b584128e6a80",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "Tenure_Band"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        },
+                        "isInvertedSelectionMode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "Tenure_Band"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "606c72230769b7c4e90d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "74e5981699d409294681",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "Contract"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "Contract"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c0db9d637c03b407c71e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "08a5a2bd403e2207407b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "Churn"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "Churn"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ef9db9c8731dd0a96bb3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d2cd0f7654e0c0e4474b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "InternetService"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Churn"
+                        }
+                      },
+                      "Property": "InternetService"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "d6b631e92439e8e35496": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "b01349c2d06d861088eb": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "a1762816c00a9ea285e1": {
+            "isHidden": true,
+            "children": {
+              "2763cf0c24596a0e2e38": {
+                "isHidden": false
+              }
+            }
+          },
+          "dbad79cbe9361b02410d": {
+            "isHidden": true
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+Rank,Driver,Cramers_V,Association_Strength
+1,Contract,0.4098,Strong
+2,Tenure_Band,0.3621,Strong
+3,OnlineSecurity,0.347,Strong
+4,TechSupport,0.3425,Strong
+5,InternetService,0.322,Strong
+6,PaymentMethod,0.3027,Strong
+7,OnlineBackup,0.2919,Moderate
+8,DeviceProtection,0.2811,Moderate
+9,Dependents,0.1634,Weak
+10,SeniorCitizen_Status,0.15,Weak
+11,Partner,0.1497,Weak

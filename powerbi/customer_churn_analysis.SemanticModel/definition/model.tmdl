@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Customer_Churn","churn_association","Support_Protection_Services"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Customer_Churn
+ref table Measure_Table
+ref table churn_association
+ref table Support_Protection_Services
+ref table 'Service Churn Comparison'
+
+ref cultureInfo en-US
+

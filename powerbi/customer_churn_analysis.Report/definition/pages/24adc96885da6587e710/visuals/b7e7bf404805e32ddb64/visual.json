@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "b7e7bf404805e32ddb64",
+  "position": {
+    "x": 141.16465863453814,
+    "y": 259.43775100401609,
+    "z": 4000,
+    "height": 1640.562248995984,
+    "width": 2357.8313253012047
+  },
+  "visualGroup": {
+    "displayName": "Driver Filter Objects",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

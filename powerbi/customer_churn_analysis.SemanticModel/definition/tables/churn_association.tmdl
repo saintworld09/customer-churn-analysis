@@ -1,0 +1,61 @@
+table churn_association
+	lineageTag: e2621e74-2bc9-40ec-a43a-9e47b5e0f6fd
+
+	column Rank
+		dataType: int64
+		formatString: 0
+		lineageTag: fe89b056-4b47-4b0f-9827-bfdb2597ec61
+		summarizeBy: sum
+		sourceColumn: Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column Driver
+		dataType: string
+		lineageTag: 5fa72e2d-48df-42d2-9932-5f13658b412b
+		summarizeBy: none
+		sourceColumn: Driver
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cramers_V
+		dataType: double
+		lineageTag: b2684b28-2f74-499b-b749-000958f99dd0
+		summarizeBy: sum
+		sourceColumn: Cramers_V
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Association_Strength
+		dataType: string
+		lineageTag: 3aa7b6ec-e99b-48cb-8eb5-0befe10c795c
+		summarizeBy: none
+		sourceColumn: Association_Strength
+
+		annotation SummarizationSetBy = Automatic
+
+	partition churn_association = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\DELL\Desktop\Customer-Churn-Analytics\customer-churn-analysis\data\processed\churn_association.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Rank", Int64.Type}, {"Driver", type text}, {"Cramers_V", type number}, {"Association_Strength", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","Tenure_Band","Tenure Band",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","OnlineSecurity","Online Security",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","TechSupport","Tech Support",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","InternetService","Internet Service",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","PaymentMethod","Payment Method",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","OnlineBackup","Online Backup",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","DeviceProtection","Device Protection",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","SeniorCitizen_Status","SeniorCitizen Status",Replacer.ReplaceText,{"Driver"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","SeniorCitizen Status","Senior Citizen Status",Replacer.ReplaceText,{"Driver"})
+				in
+				    #"Replaced Value8"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

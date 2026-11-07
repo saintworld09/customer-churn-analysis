@@ -1,0 +1,4 @@
+relationship AutoDetected_e954993b-98e7-417c-b760-70220ede30a1
+	fromColumn: Support_Protection_Services.customerID
+	toColumn: Customer_Churn.customerID
+
