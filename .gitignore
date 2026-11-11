@@ -28,3 +28,13 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Power BI local settings and cache
+**/.pbi/
+
+# Temporary project backups and review files
+*.bak
+*.before_encoding_repair.bak
+sql_scripts_review.txt
+fix_bookmarks.py
+bookmark_backup_*/

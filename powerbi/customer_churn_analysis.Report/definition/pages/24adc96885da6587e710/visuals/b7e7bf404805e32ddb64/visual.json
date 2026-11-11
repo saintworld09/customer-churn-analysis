@@ -4,9 +4,10 @@
   "position": {
     "x": 141.16465863453814,
     "y": 259.43775100401609,
-    "z": 4000,
+    "z": 6000,
     "height": 1640.562248995984,
-    "width": 2357.8313253012047
+    "width": 2357.8313253012047,
+    "tabOrder": 7000
   },
   "visualGroup": {
     "displayName": "Driver Filter Objects",

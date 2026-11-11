@@ -1045,7 +1045,129 @@ No universal threshold was selected from the dataset alone.
 
 ---
 
-# 19. Major Findings From the Python Analysis
+# 19. Script 17 — Categorical Churn Association Analysis
+
+### Purpose
+
+Script 17, `17_churn_association.py`, evaluates the strength of association between selected categorical customer characteristics and churn.
+
+It uses **bias-corrected Cramér's V** to quantify the association between each selected categorical variable and the binary churn outcome. The resulting values are ranked to identify which categorical characteristics have the strongest observed relationships with churn.
+
+Unlike the earlier statistical feature-association analysis, this script produces a separate ranked output intended to support interpretation and visualization of categorical churn drivers.
+
+### Methodology
+
+The script reads the original dataset:
+
+`data/raw/Telco-Customer-Churn.csv`
+
+It prepares two categorical variables for analysis:
+
+- `Tenure_Band`: Groups customer tenure into five categories: 0–6, 7–12, 13–24, 25–48, and 49–72 months.
+- `SeniorCitizen_Status`: Converts the senior citizen indicator into Non-Senior Citizen and Senior Citizen categories.
+
+The script evaluates the following 11 categorical drivers:
+
+1. Contract
+2. Tenure_Band
+3. InternetService
+4. TechSupport
+5. OnlineSecurity
+6. OnlineBackup
+7. DeviceProtection
+8. PaymentMethod
+9. SeniorCitizen_Status
+10. Partner
+11. Dependents
+
+Customer identifiers and continuous numerical variables are excluded from this categorical association ranking.
+
+### Cramér's V Calculation
+
+For each driver, the script:
+
+1. Removes observations with missing values in the variables being compared.
+2. Creates a contingency table between the selected driver and churn.
+3. Performs a chi-square calculation.
+4. Calculates the association statistic.
+5. Applies bias correction to reduce the upward bias associated with sample size and table dimensions.
+6. Produces the corrected Cramér's V value.
+
+Cramér's V ranges from 0 to 1:
+
+- Values closer to 0 indicate weaker association.
+- Values closer to 1 indicate stronger association.
+
+The script also assigns descriptive strength categories:
+
+| Cramér's V | Association strength |
+|---|---|
+| Below 0.10 | Very Weak |
+| 0.10 to below 0.20 | Weak |
+| 0.20 to below 0.30 | Moderate |
+| 0.30 to below 0.50 | Strong |
+| 0.50 and above | Very Strong |
+
+These categories are descriptive interpretation bands used by this project, not universal statistical thresholds.
+
+### Results
+
+The script produced the following ranking:
+
+| Rank | Driver | Cramér's V | Association strength |
+|---:|---|---:|---|
+| 1 | Contract | 0.4098 | Strong |
+| 2 | Tenure_Band | 0.3621 | Strong |
+| 3 | OnlineSecurity | 0.3470 | Strong |
+| 4 | TechSupport | 0.3425 | Strong |
+| 5 | InternetService | 0.3220 | Strong |
+| 6 | PaymentMethod | 0.3027 | Strong |
+| 7 | OnlineBackup | 0.2919 | Moderate |
+| 8 | DeviceProtection | 0.2811 | Moderate |
+| 9 | Dependents | 0.1638 | Weak |
+| 10 | SeniorCitizen_Status | 0.1504 | Weak |
+| 11 | Partner | 0.1500 | Weak |
+
+### Key Observations
+
+**Contract** recorded the strongest association with churn among the 11 categorical variables evaluated, with a Cramér's V of 0.4098.
+
+**Tenure_Band** ranked second at 0.3621, reinforcing the importance of customer tenure when examining churn patterns.
+
+OnlineSecurity, TechSupport, InternetService, and PaymentMethod also recorded strong associations under the project's interpretation bands.
+
+OnlineBackup and DeviceProtection showed moderate associations, while Dependents, SeniorCitizen_Status, and Partner showed weaker associations.
+
+These results describe relationships in the available dataset. They do not establish that any individual characteristic causes customers to churn.
+
+### Output
+
+The script exports the ranked results to:
+
+`data/processed/churn_association.csv`
+
+The output contains:
+
+- Rank
+- Driver
+- Cramers_V
+- Association_Strength
+
+This output provides a structured ranking that can be used in subsequent reporting and Power BI visualizations.
+
+### Analytical Considerations
+
+Cramér's V measures the strength of association between categorical variables; it does not identify the direction of the relationship or explain the underlying reason for churn.
+
+The results should therefore be interpreted alongside observed churn rates, customer segment analysis, statistical tests, and business context.
+
+The ranking is also limited to the 11 categorical drivers selected for this analysis. It should not be interpreted as a ranking of every possible churn predictor.
+
+---
+
+
+
+# 20. Major Findings From the Python Analysis
 
 The complete Python analysis produced several consistent findings.
 
@@ -1158,7 +1280,7 @@ Therefore, model deployment should consider not only predictive performance but 
 
 ---
 
-# 20. Analytical Limitations
+# 21. Analytical Limitations
 
 The Python analysis has several important limitations.
 
@@ -1193,15 +1315,27 @@ An operational threshold should ideally be validated against business interventi
 
 Logistic Regression coefficients represent conditional model relationships. They should not be interpreted as causal effects.
 
+## Categorical churn association ranking
+
+Script 17 generates a separate categorical association ranking in the processed data directory.
+
+
+data/processed/
+└── churn_association.csv
+
+
+This file contains the ranked categorical drivers, their bias-corrected Cramér's V values, and their descriptive association strength classifications.
+
+
 ---
 
-# 21. Python Analysis Outputs
+# 22. Python Analysis Outputs
 
 The Python stage generated the following analytical outputs.
 
 ## Descriptive analysis
 
-```text
+
 data/analysis_outputs/
 ├── churn_by_contract.csv
 ├── churn_by_tenure.csv
@@ -1213,7 +1347,7 @@ data/analysis_outputs/
 
 ## Customer segmentation
 
-```text
+
 data/analysis_outputs/
 ├── customer_segment_churn_analysis.csv
 └── high_churn_customer_segments.csv
@@ -1255,58 +1389,84 @@ data/analysis_outputs/
 
 ---
 
-# 22. Reproducibility
+# 23. Reproducibility
 
 The Python workflow was designed so that the analysis can be repeated without manually modifying the raw dataset.
 
-The general workflow is:
-
 ```text
+MAIN DATA PREPARATION AND ANALYSIS WORKFLOW
+
 Raw CSV
-   ↓
+   |
+   v
 01_data_profiling.py
-   ↓
+   |
+   v
 02_data_cleaning.py
-   ↓
+   |
+   v
 customer_churn_clean.csv
-   ↓
+   |
+   v
 03_validate_clean_data.py
-   ↓
+   |
+   v
 Descriptive Analysis
-   ↓
+   |
+   v
 Segment Analysis
-   ↓
-Association Analysis
-   ↓
+   |
+   v
+Feature Association Analysis
+   |
+   v
 Statistical Analysis
-   ↓
+   |
+   v
 Predictive Modeling
-   ↓
+   |
+   v
 Model Comparison
-   ↓
+   |
+   v
 Threshold Analysis
-   ↓
+   |
+   v
 Business Impact Analysis
+
+
+ADDITIONAL CATEGORICAL ASSOCIATION ANALYSIS
+
+Raw CSV
+   |
+   v
+17_churn_association.py
+   |
+   v
+data/processed/churn_association.csv
 ```
 
-If additional valid customer records are added to the raw dataset, the cleaning and analytical scripts can be rerun to regenerate the processed dataset and analytical outputs.
 
 This supports the project's goal of creating a refreshable and maintainable analytics workflow.
 
 ---
 
-# 23. Overall Python Stage Conclusion
+# 24. Overall Python Stage Conclusion
 
-The Python analysis established a complete analytical foundation for the customer churn project.
+The Python analysis established a comprehensive analytical foundation for the customer churn project.
 
 The analysis showed that churn is not evenly distributed across the customer base. Contract type, tenure, internet service, several service features, payment method, and other customer characteristics show varying levels of association with churn.
+
+The categorical association analysis using bias-corrected Cramér's V further quantified the strength of relationships between selected customer characteristics and churn. Contract recorded the strongest association (0.4098), followed by Tenure_Band (0.3621), OnlineSecurity (0.3470), and TechSupport (0.3425). These findings reinforce the importance of examining customer commitments, tenure, and service-related characteristics when investigating churn patterns.
 
 The predictive analysis demonstrated that a Logistic Regression model can provide useful churn discrimination, achieving a ROC-AUC of 0.8419 on the fixed test set.
 
 Feature-removal experiments did not improve predictive performance, so the baseline model was retained as the reference specification.
 
-Threshold analysis then demonstrated that the same predictive model can support different operational strategies. Lower thresholds identify more potential churners but require contacting more customers, while higher thresholds produce smaller and more selective intervention lists but miss more actual churners.
+Threshold analysis demonstrated that the same predictive model can support different operational strategies. Lower thresholds identify more potential churners but require contacting more customers, while higher thresholds produce smaller and more selective intervention lists but miss more actual churners.
 
 The appropriate operational threshold therefore depends on business capacity, intervention cost, and the relative importance assigned to missed churners versus unnecessary interventions.
+
+All association findings are descriptive and should not be interpreted as proof of causation. Predictive performance and statistical relationships should also be considered within the limitations of the available dataset and modeling approach.
 
 The Python stage is now complete enough to serve as the analytical foundation for the Power BI reporting layer.

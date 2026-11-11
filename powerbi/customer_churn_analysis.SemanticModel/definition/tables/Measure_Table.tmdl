@@ -317,6 +317,1012 @@ table Measure_Table
 		lineageTag: bcc19322-56fa-4807-b5fa-956f016f9803
 		dataCategory: ImageUrl
 
+	measure 'HTML - Executive Overview' = ```
+			
+			VAR TotalCustomersText =
+			    FORMAT ( [Total Customers], "#,##0" )
+			
+			VAR ChurnedCustomersText =
+			    FORMAT ( [Churned Customers], "#,##0" )
+			
+			VAR ActiveCustomersText =
+			    FORMAT ( [Active Customers], "#,##0" )
+			
+			VAR ChurnRateText =
+			    FORMAT ( [Churn Rate], "0.00%" )
+			
+			VAR AverageTenureText =
+			    FORMAT ( [Average Tenure], "0.0" ) & " months"
+			
+			VAR AverageMonthlyChargesText =
+			    "$" & FORMAT ( [Average Monthly Charges], "#,##0.00" )
+			
+			VAR ChurnedMonthlyChargesText =
+			    "$" & FORMAT ( [Avg Monthly Charges - Churned], "#,##0.00" )
+			
+			VAR ActiveMonthlyChargesText =
+			    "$" & FORMAT ( [Avg Monthly Charges - Active], "#,##0.00" )
+			
+			VAR ScopeLabel =
+			    "CURRENT DATA VIEW"
+			
+			VAR CSS =
+			"<style>
+			*{box-sizing:border-box}
+			html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#07111f;font-family:'Segoe UI',Arial,sans-serif}
+			.shell{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;padding:19px 25px 15px;color:#edf2fa;background:radial-gradient(ellipse at 78% 24%,rgba(44,85,125,.19),transparent 38%),radial-gradient(ellipse at 8% 90%,rgba(179,142,68,.09),transparent 38%),linear-gradient(135deg,#07111f 0%,#0b1728 55%,#0a1422 100%)}
+			.grid{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(130,157,190,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(130,157,190,.15) 1px,transparent 1px);background-size:34px 34px;animation:gridmove 35s linear infinite}
+			.scan{position:absolute;top:-30%;left:-20%;width:140%;height:2px;background:linear-gradient(90deg,transparent,rgba(196,164,97,.22),transparent);filter:blur(2px);animation:scan 12s ease-in-out infinite;pointer-events:none}
+			@keyframes gridmove{to{background-position:34px 34px}}
+			@keyframes scan{0%,100%{transform:translateY(0);opacity:0}15%,75%{opacity:1}50%{transform:translateY(850px)}}
+			@keyframes fadeup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+			@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(91,190,142,.08),0 0 13px rgba(91,190,142,.2)}50%{box-shadow:0 0 0 6px rgba(91,190,142,.025),0 0 21px rgba(91,190,142,.36)}}
+			@keyframes flow{to{stroke-dashoffset:-180}}
+			.topbar{height:49px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2;animation:fadeup .7s ease both}
+			.brand{display:flex;align-items:center;gap:12px}
+			.logo{width:39px;height:39px;border:1px solid rgba(205,171,103,.8);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#d7b66f;font-size:23px;font-weight:600;box-shadow:inset 0 0 15px rgba(205,171,103,.08),0 0 18px rgba(205,171,103,.07)}
+			.brand-name{font-size:15px;letter-spacing:1.4px;font-weight:650;color:#f1f4fa}
+			.brand-sub{font-size:9px;color:#8798ad;letter-spacing:2.1px;text-transform:uppercase;margin-top:3px}
+			.status{display:flex;align-items:center;gap:9px;border:1px solid rgba(100,139,164,.25);background:rgba(18,35,54,.65);padding:9px 13px;border-radius:30px;color:#b6c4d4;font-size:10px;letter-spacing:.55px}
+			.status-dot{width:7px;height:7px;border-radius:50%;background:#66c69a;animation:pulse 2.5s infinite}
+			.slicer-space{height:47px;position:relative;z-index:2}
+			.hero{height:340px;display:grid;grid-template-columns:.91fr 1.09fr;gap:20px;position:relative;z-index:1}
+			.intro{display:flex;flex-direction:column;justify-content:center;padding:3px 10px 3px 5px;animation:fadeup .8s .08s ease both}
+			.eyebrow{display:flex;align-items:center;gap:9px;color:#d1b16b;font-size:10px;letter-spacing:2.3px;text-transform:uppercase;font-weight:650}
+			.eyebrow:before{content:'';width:24px;height:1px;background:#c6a35e}
+			h1{font-size:clamp(31px,3.25vw,45px);line-height:1.12;letter-spacing:-1.5px;margin:19px 0 15px;font-weight:650;color:#f2f5fa}
+			.gold{color:#d7b66f}
+			.description{font-size:13px;line-height:1.85;color:#a9b8c9;max-width:490px;margin:0}
+			.description strong{color:#e0c27f;font-weight:600}
+			.equation{display:flex;align-items:center;gap:7px;margin-top:25px;flex-wrap:nowrap}
+			.eq-card{padding:11px 12px;border:1px solid rgba(127,153,180,.22);background:linear-gradient(145deg,rgba(29,48,70,.75),rgba(14,29,47,.7));border-radius:8px;color:#d8e1ec;font-size:10px;letter-spacing:.2px;white-space:nowrap}
+			.eq-card.result{border-color:rgba(203,168,98,.55);color:#e6c77f;background:rgba(125,95,40,.13)}
+			.eq-symbol{font-size:15px;color:#9babc0}
+			.lifecycle{height:100%;position:relative;overflow:hidden;border:1px solid rgba(118,149,180,.23);border-radius:16px;background:linear-gradient(145deg,rgba(21,39,60,.94),rgba(10,23,39,.96));padding:19px 19px 15px;box-shadow:0 18px 50px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.035);animation:fadeup .8s .18s ease both}
+			.lifecycle:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 48%,rgba(72,114,151,.12),transparent 60%);pointer-events:none}
+			.panel-head{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1}
+			.panel-title{font-size:14px;font-weight:650;letter-spacing:.3px;color:#e6edf6}
+			.panel-subtitle{font-size:10px;color:#879bb1;margin-top:6px}
+			.panel-tag{font-size:9px;color:#d7b66f;border:1px solid rgba(205,171,103,.35);border-radius:20px;padding:7px 10px;white-space:nowrap;letter-spacing:.6px}
+			.journey{position:relative;margin-top:28px;height:167px;z-index:1}
+			.route{position:absolute;left:2%;top:23px;width:96%;height:105px;overflow:visible}
+			.route-path{fill:none;stroke:url(#routeGradient);stroke-width:2;stroke-linecap:round;stroke-dasharray:7 8;animation:flow 8s linear infinite}
+			.stage-grid{position:absolute;left:0;right:0;top:0;display:grid;grid-template-columns:repeat(6,1fr);gap:3px;height:100%}
+			.stage{display:flex;align-items:center;flex-direction:column;text-align:center;min-width:0}
+			.node{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#142b42;border:1px solid rgba(202,169,103,.8);color:#e1bd72;font-size:12px;font-weight:700;box-shadow:0 0 17px rgba(200,165,98,.13);position:relative;z-index:2}
+			.stage:nth-child(4) .node,.stage:nth-child(5) .node{border-color:rgba(107,160,203,.8);color:#9dc5e9;box-shadow:0 0 17px rgba(107,160,203,.14)}
+			.stage:nth-child(6) .node{border-color:rgba(99,192,145,.85);color:#82d3a9;box-shadow:0 0 18px rgba(99,192,145,.2)}
+			.stage-name{font-size:10px;font-weight:650;color:#e3eaf3;margin-top:15px;white-space:nowrap}
+			.stage-desc{font-size:8px;line-height:1.5;color:#8fa2b8;margin-top:5px;max-width:85px}
+			.control-note{position:absolute;bottom:15px;left:19px;right:19px;border-top:1px solid rgba(132,158,183,.16);padding-top:12px;display:flex;justify-content:space-between;gap:10px;align-items:center;z-index:1}
+			.objective{font-size:9px;color:#aab9ca;line-height:1.5}
+			.objective strong{color:#d8bd7e;font-weight:600}
+			.editable{font-size:8px;color:#8fa3b9;border:1px solid rgba(127,153,180,.22);padding:6px 8px;border-radius:5px;white-space:nowrap}
+			.metrics{height:80px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;position:relative;z-index:1;margin-top:13px;animation:fadeup .8s .28s ease both}
+			.metric{background:linear-gradient(145deg,rgba(23,42,64,.83),rgba(14,28,45,.8));border:1px solid rgba(124,151,180,.17);border-radius:10px;padding:12px 13px;min-width:0;position:relative;overflow:hidden}
+			.metric:after{content:'';position:absolute;left:0;top:0;width:2px;height:100%;background:rgba(205,171,103,.55)}
+			.metric-label{font-size:8px;color:#91a3b8;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+			.metric-value{font-size:21px;font-weight:650;color:#f0f3f8;letter-spacing:-.5px;margin-top:7px;white-space:nowrap}
+			.metric-value.gold-text{color:#dfc17d}
+			.metric-foot{font-size:8px;color:#8296ad;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+			.navigation{height:49px;display:grid;grid-template-columns:repeat(5,1fr);gap:9px;position:relative;z-index:1;margin-top:13px;animation:fadeup .8s .38s ease both}
+			.nav-card{display:flex;align-items:center;justify-content:center;border:1px solid rgba(123,150,179,.18);background:rgba(17,34,53,.65);border-radius:8px;color:#aebed0;font-size:10px;letter-spacing:.3px;position:relative}
+			.nav-card.active{border-color:rgba(208,174,104,.65);background:linear-gradient(100deg,rgba(126,95,43,.19),rgba(35,46,59,.6));color:#e6c77e;box-shadow:inset 0 0 18px rgba(202,166,94,.06)}
+			.nav-card.active:before{content:'';position:absolute;top:-1px;left:24%;right:24%;height:2px;background:#d4b36e;box-shadow:0 0 10px rgba(212,179,110,.65)}
+			.footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;position:relative;z-index:1;color:#657991;font-size:8px;letter-spacing:.65px}
+			.footer-scope{color:#a9bbcd;letter-spacing:1px}
+			@media(max-width:1100px){.shell{padding:12px}.hero{grid-template-columns:.85fr 1.15fr;gap:10px}.lifecycle{padding:14px}.stage-name{font-size:8px}.stage-desc{font-size:7px}.metric{padding:9px}.metric-value{font-size:17px}.eq-card{padding:9px 7px;font-size:8px}}
+			</style>"
+			
+			RETURN
+			    CSS
+			        & "<div class='shell'>"
+			        & "<div class='grid'></div><div class='scan'></div>"
+			
+			        & "<header class='topbar'>"
+			        & "<div class='brand'>"
+			        & "<div class='logo'>C</div>"
+			        & "<div><div class='brand-name'>CUSTOMER CHURN INTELLIGENCE CENTRE</div>"
+			        & "<div class='brand-sub'>Customer Retention &amp; Predictive Analytics</div></div>"
+			        & "</div>"
+			        & "<div class='status'><span class='status-dot'></span> INTERACTIVE ANALYTICS ENVIRONMENT</div>"
+			        & "</header>"
+			
+			        & "<div class='slicer-space'></div>"
+			
+			        & "<main class='hero'>"
+			        & "<section class='intro'>"
+			        & "<div class='eyebrow'>Customer Retention Intelligence</div>"
+			        & "<h1>From Customer Signals<br><span class='gold'>to Retention Decisions.</span></h1>"
+			        & "<p class='description'>An analytical decision environment for understanding how <strong>customer behaviour, service experience, tenure and payment patterns</strong> combine to influence churn risk and retention opportunities.</p>"
+			        & "<div class='equation'>"
+			        & "<div class='eq-card'>Customer Signals</div>"
+			        & "<span class='eq-symbol'>×</span>"
+			        & "<div class='eq-card'>Risk</div>"
+			        & "<span class='eq-symbol'>×</span>"
+			        & "<div class='eq-card'>Intervention</div>"
+			        & "<span class='eq-symbol'>=</span>"
+			        & "<div class='eq-card result'>Retention</div>"
+			        & "</div>"
+			        & "</section>"
+			
+			        & "<section class='lifecycle'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Customer Retention Control Cycle</div>"
+			        & "<div class='panel-subtitle'>From customer signals to measurable retention action.</div></div>"
+			        & "<div class='panel-tag'>6-STAGE JOURNEY</div>"
+			        & "</div>"
+			
+			        & "<div class='journey'>"
+			        & "<svg class='route' viewBox='0 0 600 105' preserveAspectRatio='none'>"
+			        & "<defs><linearGradient id='routeGradient' x1='0%' y1='0%' x2='100%' y2='0%'>"
+			        & "<stop offset='0%' stop-color='#d4b16a'/><stop offset='48%' stop-color='#78a8d1'/><stop offset='100%' stop-color='#6bc294'/>"
+			        & "</linearGradient></defs>"
+			        & "<path class='route-path' d='M25 25 C75 25 75 53 120 53 S170 25 220 25 S270 53 320 53 S370 25 420 25 S470 53 520 53 S560 25 575 25'/>"
+			        & "</svg>"
+			
+			        & "<div class='stage-grid'>"
+			        & "<div class='stage'><div class='node'>01</div><div class='stage-name'>Acquisition</div><div class='stage-desc'>Customer entry</div></div>"
+			        & "<div class='stage'><div class='node'>02</div><div class='stage-name'>Onboarding</div><div class='stage-desc'>Early experience</div></div>"
+			        & "<div class='stage'><div class='node'>03</div><div class='stage-name'>Service Use</div><div class='stage-desc'>Product engagement</div></div>"
+			        & "<div class='stage'><div class='node'>04</div><div class='stage-name'>Billing</div><div class='stage-desc'>Charges &amp; payment</div></div>"
+			        & "<div class='stage'><div class='node'>05</div><div class='stage-name'>Risk Detection</div><div class='stage-desc'>Identify warning signs</div></div>"
+			        & "<div class='stage'><div class='node'>06</div><div class='stage-name'>Retention</div><div class='stage-desc'>Targeted intervention</div></div>"
+			        & "</div></div>"
+			
+			        & "<div class='control-note'>"
+			        & "<div class='objective'><strong>Control objective:</strong> identify at-risk customers early and direct retention efforts using evidence.</div>"
+			        & "<div class='editable'>ANALYTICAL FRAMEWORK</div>"
+			        & "</div>"
+			        & "</section>"
+			        & "</main>"
+			
+			        & "<section class='metrics'>"
+			        & "<div class='metric'><div class='metric-label'>Total Customers</div><div class='metric-value'>" & TotalCustomersText & "</div><div class='metric-foot'>Customers in current selection</div></div>"
+			        & "<div class='metric'><div class='metric-label'>Churned Customers</div><div class='metric-value gold-text'>" & ChurnedCustomersText & "</div><div class='metric-foot'>Customers who left</div></div>"
+			        & "<div class='metric'><div class='metric-label'>Active Customers</div><div class='metric-value'>" & ActiveCustomersText & "</div><div class='metric-foot'>Customers retained</div></div>"
+			        & "<div class='metric'><div class='metric-label'>Churn Rate</div><div class='metric-value gold-text'>" & ChurnRateText & "</div><div class='metric-foot'>Churned / total customers</div></div>"
+			        & "<div class='metric'><div class='metric-label'>Average Tenure</div><div class='metric-value'>" & AverageTenureText & "</div><div class='metric-foot'>Customer relationship length</div></div>"
+			        & "<div class='metric'><div class='metric-label'>Avg. Monthly Charges</div><div class='metric-value'>" & AverageMonthlyChargesText & "</div><div class='metric-foot'>Churned " & ChurnedMonthlyChargesText & " · Active " & ActiveMonthlyChargesText & "</div></div>"
+			        & "</section>"
+			
+			        & "<nav class='navigation'>"
+			        & "<div class='nav-card active'>Executive Overview</div>"
+			        & "<div class='nav-card'>Churn Drivers</div>"
+			        & "<div class='nav-card'>High-Risk Segments</div>"
+			        & "<div class='nav-card'>Predictive Intelligence</div>"
+			        & "<div class='nav-card'>Retention Strategy</div>"
+			        & "</nav>"
+			
+			        & "<footer class='footer'>"
+			        & "<span>CUSTOMER CHURN ANALYTICS · DECISION SUPPORT</span>"
+			        & "<span class='footer-scope'>" & ScopeLabel & "</span>"
+			        & "<span>PORTFOLIO ANALYTICS CASE STUDY</span>"
+			        & "</footer>"
+			        & "</div>"
+			
+			```
+		lineageTag: 28eb5537-626c-4086-8195-51f10bdb3772
+
+	measure 'DAX Syntax Test' = VAR TotalCustomersText = FORMAT([Total Customers], "#,##0") VAR ChurnedCustomersText = FORMAT([Churned Customers], "#,##0") RETURN TotalCustomersText & " | " & ChurnedCustomersText
+		lineageTag: 5dd2cfcd-b4c0-416f-9e76-dd843f999ed6
+
+	measure 'HTML - Churn Drivers' = ```
+			
+			VAR MonthToMonthRate =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[Contract] = "Month-to-month"
+			    )
+			
+			VAR OneYearRate =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[Contract] = "One year"
+			    )
+			
+			VAR TwoYearRate =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[Contract] = "Two year"
+			    )
+			
+			VAR ContractGap =
+			    MonthToMonthRate - TwoYearRate
+			
+			VAR SecurityNo =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[OnlineSecurity] = "No"
+			    )
+			
+			VAR SecurityYes =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[OnlineSecurity] = "Yes"
+			    )
+			
+			VAR TechSupportNo =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[TechSupport] = "No"
+			    )
+			
+			VAR TechSupportYes =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[TechSupport] = "Yes"
+			    )
+			
+			VAR BackupNo =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[OnlineBackup] = "No"
+			    )
+			
+			VAR BackupYes =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[OnlineBackup] = "Yes"
+			    )
+			
+			VAR DeviceNo =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[DeviceProtection] = "No"
+			    )
+			
+			VAR DeviceYes =
+			    CALCULATE (
+			        [Churn Rate],
+			        Customer_Churn[DeviceProtection] = "Yes"
+			    )
+			
+			VAR DriverRows =
+			    CONCATENATEX (
+			        TOPN (
+			            11,
+			            ALL ( churn_association ),
+			            churn_association[Rank], ASC
+			        ),
+			        "<div class='driver-row'>"
+			            & "<div class='rank'>"
+			            & FORMAT ( churn_association[Rank], "00" )
+			            & "</div>"
+			            & "<div class='driver-info'>"
+			            & "<div class='driver-name'>"
+			            & churn_association[Driver]
+			            & "</div>"
+			            & "<div class='bar-track'><div class='bar-fill' style='width:"
+			            & FORMAT ( churn_association[Cramers_V] * 200, "0.0" )
+			            & "%'></div></div>"
+			            & "</div>"
+			            & "<div class='driver-value'>"
+			            & FORMAT ( churn_association[Cramers_V], "0.000" )
+			            & "</div>"
+			            & "<div class='strength'>"
+			            & churn_association[Association_Strength]
+			            & "</div>"
+			            & "</div>",
+			        "",
+			        churn_association[Rank], ASC
+			    )
+			
+			VAR CSS =
+			"<style>
+			*{box-sizing:border-box}
+			html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#07111f;font-family:'Segoe UI',Arial,sans-serif}
+			.shell{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;padding:17px 24px 13px;color:#edf2fa;background:radial-gradient(ellipse at 80% 20%,rgba(44,85,125,.18),transparent 40%),radial-gradient(ellipse at 8% 90%,rgba(179,142,68,.08),transparent 38%),linear-gradient(135deg,#07111f,#0b1728 55%,#0a1422)}
+			.grid{position:absolute;inset:0;pointer-events:none;opacity:.11;background-image:linear-gradient(rgba(130,157,190,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(130,157,190,.15) 1px,transparent 1px);background-size:34px 34px}
+			.topbar{height:47px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+			.brand{display:flex;align-items:center;gap:11px}
+			.logo{width:37px;height:37px;border:1px solid rgba(205,171,103,.8);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#d7b66f;font-size:22px;font-weight:650}
+			.brand-name{font-size:14px;letter-spacing:1.3px;font-weight:650;color:#f1f4fa}
+			.brand-sub{font-size:9px;color:#8798ad;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+			.status{border:1px solid rgba(100,139,164,.25);background:rgba(18,35,54,.65);padding:8px 13px;border-radius:25px;color:#b6c4d4;font-size:9px;letter-spacing:.6px}
+			.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#66c69a;margin-right:7px}
+			.slicer-space{height:40px;position:relative;z-index:2}
+			.heading{height:66px;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center}
+			.eyebrow{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d1b16b;font-weight:650}
+			h1{font-size:27px;line-height:1.1;margin:7px 0 0;color:#f2f5fa;letter-spacing:-.6px}
+			.gold{color:#d7b66f}
+			.heading-note{max-width:380px;text-align:right;color:#93a6bb;font-size:10px;line-height:1.6}
+			.content{height:390px;display:grid;grid-template-columns:1.08fr .92fr;grid-template-rows:1fr 116px;gap:12px;position:relative;z-index:1;margin-top:5px}
+			.panel{border:1px solid rgba(118,149,180,.2);border-radius:12px;background:linear-gradient(145deg,rgba(21,39,60,.94),rgba(10,23,39,.96));padding:13px 15px;min-width:0;overflow:hidden}
+			.association{grid-row:1 / 3}
+			.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+			.panel-title{font-size:12px;font-weight:650;color:#e6edf6;letter-spacing:.2px}
+			.panel-subtitle{font-size:8px;color:#8297ae;margin-top:4px}
+			.panel-tag{font-size:8px;color:#d7b66f;border:1px solid rgba(205,171,103,.35);border-radius:20px;padding:6px 8px;white-space:nowrap}
+			.driver-header{display:grid;grid-template-columns:27px 1fr 48px 75px;gap:7px;padding:7px 0;border-bottom:1px solid rgba(132,158,183,.18);font-size:7px;text-transform:uppercase;letter-spacing:.8px;color:#8296ac}
+			.driver-row{display:grid;grid-template-columns:27px 1fr 48px 75px;gap:7px;align-items:center;height:28px;border-bottom:1px solid rgba(132,158,183,.08)}
+			.rank{font-size:9px;color:#c7a96c;font-weight:650}
+			.driver-info{min-width:0}
+			.driver-name{font-size:9px;color:#dce5ef;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+			.bar-track{height:4px;background:rgba(122,146,173,.15);border-radius:5px;overflow:hidden}
+			.bar-fill{height:100%;background:linear-gradient(90deg,#b38d4c,#77a9d1);border-radius:5px}
+			.driver-value{font-size:9px;text-align:right;color:#e4c77f;font-weight:650}
+			.strength{font-size:8px;text-align:right;color:#91a5ba}
+			.association-note{font-size:8px;color:#8296aa;line-height:1.5;margin-top:8px}
+			.contract-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+			.contract-card{padding:12px 8px;background:rgba(27,46,68,.75);border:1px solid rgba(127,153,180,.18);border-radius:8px;min-width:0}
+			.contract-name{font-size:8px;color:#a1b1c3;letter-spacing:.5px;white-space:nowrap}
+			.contract-rate{font-size:22px;font-weight:650;color:#e7c77e;margin-top:9px}
+			.contract-caption{font-size:8px;color:#8094a9;margin-top:4px}
+			.contract-insight{margin-top:12px;padding:9px 10px;border-left:2px solid #d1ad68;background:rgba(125,95,40,.1);font-size:9px;color:#b7c4d3;line-height:1.5}
+			.contract-insight strong{color:#e4c77f}
+			.gap-value{font-size:16px;color:#e4c77f;font-weight:650;margin-top:3px}
+			.services{grid-column:2;grid-row:2;padding:10px 13px}
+			.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px}
+			.service-item{border-left:1px solid rgba(127,153,180,.25);padding-left:9px;min-width:0}
+			.service-name{font-size:8px;color:#aab9ca;white-space:nowrap}
+			.service-rates{font-size:10px;color:#e2eaf3;margin-top:6px;white-space:nowrap}
+			.service-rates strong{color:#e4c77f}
+			.service-legend{font-size:7px;color:#8195aa;margin-top:4px}
+			.navigation{height:43px;display:grid;grid-template-columns:repeat(5,1fr);gap:9px;position:relative;z-index:1;margin-top:12px}
+			.nav-card{display:flex;align-items:center;justify-content:center;border:1px solid rgba(123,150,179,.18);background:rgba(17,34,53,.65);border-radius:8px;color:#aebed0;font-size:9px;letter-spacing:.2px}
+			.nav-card.active{border-color:rgba(208,174,104,.65);background:rgba(126,95,43,.17);color:#e6c77e}
+			.footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px;position:relative;z-index:1;color:#657991;font-size:8px;letter-spacing:.6px}
+			.footer-scope{color:#a9bbcd;letter-spacing:1px}
+			</style>"
+			
+			RETURN
+			    CSS
+			        & "<div class='shell'>"
+			        & "<div class='grid'></div>"
+			
+			        & "<header class='topbar'>"
+			        & "<div class='brand'>"
+			        & "<div class='logo'>C</div>"
+			        & "<div><div class='brand-name'>CUSTOMER CHURN INTELLIGENCE CENTRE</div>"
+			        & "<div class='brand-sub'>Customer Retention &amp; Predictive Analytics</div></div>"
+			        & "</div>"
+			        & "<div class='status'><span class='status-dot'></span> ANALYTICAL DRIVER MONITOR</div>"
+			        & "</header>"
+			
+			        & "<div class='slicer-space'></div>"
+			
+			        & "<section class='heading'>"
+			        & "<div><div class='eyebrow'>02 / Churn Diagnostics</div>"
+			        & "<h1>Understanding the <span class='gold'>Drivers of Churn.</span></h1></div>"
+			        & "<div class='heading-note'>Explore the customer characteristics associated with churn and compare actual churn rates across contracts and service protection choices.</div>"
+			        & "</section>"
+			
+			        & "<main class='content'>"
+			
+			        & "<section class='panel association'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Churn Association Ranking</div>"
+			        & "<div class='panel-subtitle'>Bias-corrected Cramer's V · 11 categorical drivers</div></div>"
+			        & "<div class='panel-tag'>FULL DATASET</div>"
+			        & "</div>"
+			        & "<div class='driver-header'><span>Rank</span><span>Driver / relative strength</span><span>Value</span><span>Strength</span></div>"
+			        & DriverRows
+			        & "<div class='association-note'>Higher Cramer's V indicates a stronger association with churn. These values describe association, not causation, and are calculated from the full dataset rather than the current slicer selection.</div>"
+			        & "</section>"
+			
+			        & "<section class='panel contracts'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Contract Risk Comparison</div>"
+			        & "<div class='panel-subtitle'>Churn rate by customer contract type</div></div>"
+			        & "<div class='panel-tag'>LIVE FILTERS</div>"
+			        & "</div>"
+			        & "<div class='contract-grid'>"
+			        & "<div class='contract-card'><div class='contract-name'>MONTH-TO-MONTH</div><div class='contract-rate'>"
+			        & FORMAT ( MonthToMonthRate, "0.00%" )
+			        & "</div><div class='contract-caption'>Churn rate</div></div>"
+			        & "<div class='contract-card'><div class='contract-name'>ONE YEAR</div><div class='contract-rate'>"
+			        & FORMAT ( OneYearRate, "0.00%" )
+			        & "</div><div class='contract-caption'>Churn rate</div></div>"
+			        & "<div class='contract-card'><div class='contract-name'>TWO YEAR</div><div class='contract-rate'>"
+			        & FORMAT ( TwoYearRate, "0.00%" )
+			        & "</div><div class='contract-caption'>Churn rate</div></div>"
+			        & "</div>"
+			        & "<div class='contract-insight'>"
+			        & "<strong>Contract risk gap</strong><div class='gap-value'>"
+			        & FORMAT ( ContractGap, "0.00%" )
+			        & "</div>Month-to-month churn rate minus two-year churn rate."
+			        & "</div>"
+			        & "</section>"
+			
+			        & "<section class='panel services'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Service Protection Comparison</div>"
+			        & "<div class='panel-subtitle'>Churn rates for customers with and without each service</div></div>"
+			        & "<div class='panel-tag'>LIVE FILTERS</div>"
+			        & "</div>"
+			        & "<div class='service-grid'>"
+			        & "<div class='service-item'><div class='service-name'>Online Security</div><div class='service-rates'>No <strong>"
+			        & FORMAT ( SecurityNo, "0.0%" )
+			        & "</strong> · Yes "
+			        & FORMAT ( SecurityYes, "0.0%" )
+			        & "</div><div class='service-legend'>No vs Yes</div></div>"
+			        & "<div class='service-item'><div class='service-name'>Tech Support</div><div class='service-rates'>No <strong>"
+			        & FORMAT ( TechSupportNo, "0.0%" )
+			        & "</strong> · Yes "
+			        & FORMAT ( TechSupportYes, "0.0%" )
+			        & "</div><div class='service-legend'>No vs Yes</div></div>"
+			        & "<div class='service-item'><div class='service-name'>Online Backup</div><div class='service-rates'>No <strong>"
+			        & FORMAT ( BackupNo, "0.0%" )
+			        & "</strong> · Yes "
+			        & FORMAT ( BackupYes, "0.0%" )
+			        & "</div><div class='service-legend'>No vs Yes</div></div>"
+			        & "<div class='service-item'><div class='service-name'>Device Protection</div><div class='service-rates'>No <strong>"
+			        & FORMAT ( DeviceNo, "0.0%" )
+			        & "</strong> · Yes "
+			        & FORMAT ( DeviceYes, "0.0%" )
+			        & "</div><div class='service-legend'>No vs Yes</div></div>"
+			        & "</div>"
+			        & "</section>"
+			
+			        & "</main>"
+			
+			        & "<nav class='navigation'>"
+			        & "<div class='nav-card'>Executive Overview</div>"
+			        & "<div class='nav-card active'>Churn Drivers</div>"
+			        & "<div class='nav-card'>High-Risk Segments</div>"
+			        & "<div class='nav-card'>Predictive Intelligence</div>"
+			        & "<div class='nav-card'>Retention Strategy</div>"
+			        & "</nav>"
+			
+			        & "<footer class='footer'>"
+			        & "<span>CUSTOMER CHURN ANALYTICS · DRIVER ANALYSIS</span>"
+			        & "<span class='footer-scope'>CURRENT DATA VIEW</span>"
+			        & "<span>ASSOCIATION IS NOT CAUSATION</span>"
+			        & "</footer>"
+			        & "</div>"
+			
+			```
+		lineageTag: b26b07c7-ff79-44d3-9254-c8d8908bb2d6
+
+	measure 'HTML - High-Risk Segments' = ```
+			
+			VAR CurrentChurnRate =
+			    FORMAT ( [Churn Rate], "0.00%" )
+			
+			VAR CurrentCustomerCount =
+			    FORMAT ( [Total Customers], "#,##0" )
+			
+			VAR SegmentCustomers =
+			    440
+			
+			VAR SegmentChurned =
+			    332
+			
+			VAR SegmentRetained =
+			    108
+			
+			VAR SegmentChurnRate =
+			    75.45
+			
+			VAR OverallChurnRate =
+			    26.54
+			
+			VAR RiskDifference =
+			    48.92
+			
+			VAR RiskMultiple =
+			    DIVIDE ( SegmentChurnRate, OverallChurnRate )
+			
+			VAR CSS =
+			"<style>
+			*{box-sizing:border-box}
+			html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#07111f;font-family:'Segoe UI',Arial,sans-serif}
+			.shell{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;padding:17px 24px 13px;color:#edf2fa;background:radial-gradient(ellipse at 80% 20%,rgba(44,85,125,.18),transparent 40%),radial-gradient(ellipse at 8% 90%,rgba(179,142,68,.08),transparent 38%),linear-gradient(135deg,#07111f,#0b1728 55%,#0a1422)}
+			.grid{position:absolute;inset:0;pointer-events:none;opacity:.11;background-image:linear-gradient(rgba(130,157,190,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(130,157,190,.15) 1px,transparent 1px);background-size:34px 34px}
+			.topbar{height:47px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+			.brand{display:flex;align-items:center;gap:11px}
+			.logo{width:37px;height:37px;border:1px solid rgba(205,171,103,.8);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#d7b66f;font-size:22px;font-weight:650}
+			.brand-name{font-size:14px;letter-spacing:1.3px;font-weight:650;color:#f1f4fa}
+			.brand-sub{font-size:9px;color:#8798ad;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+			.status{border:1px solid rgba(100,139,164,.25);background:rgba(18,35,54,.65);padding:8px 13px;border-radius:25px;color:#b6c4d4;font-size:9px;letter-spacing:.6px}
+			.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#e0a56c;margin-right:7px}
+			.slicer-space{height:40px;position:relative;z-index:2}
+			.heading{height:65px;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center}
+			.eyebrow{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#d1b16b;font-weight:650}
+			h1{font-size:27px;line-height:1.1;margin:7px 0 0;color:#f2f5fa;letter-spacing:-.6px}
+			.gold{color:#d7b66f}
+			.heading-note{max-width:390px;text-align:right;color:#93a6bb;font-size:10px;line-height:1.6}
+			.main-grid{height:405px;display:grid;grid-template-columns:1.12fr .88fr;grid-template-rows:225px 168px;gap:12px;position:relative;z-index:1;margin-top:5px}
+			.panel{border:1px solid rgba(118,149,180,.2);border-radius:12px;background:linear-gradient(145deg,rgba(21,39,60,.94),rgba(10,23,39,.96));padding:15px 17px;min-width:0;overflow:hidden}
+			.profile{grid-column:1;grid-row:1}
+			.comparison{grid-column:2;grid-row:1}
+			.actions{grid-column:1 / 3;grid-row:2}
+			.panel-head{display:flex;justify-content:space-between;align-items:center}
+			.panel-title{font-size:12px;font-weight:650;color:#e6edf6;letter-spacing:.2px}
+			.panel-subtitle{font-size:8px;color:#8297ae;margin-top:4px}
+			.panel-tag{font-size:8px;color:#d7b66f;border:1px solid rgba(205,171,103,.35);border-radius:20px;padding:6px 8px;white-space:nowrap}
+			.profile-body{display:grid;grid-template-columns:1fr 145px;gap:14px;align-items:center;margin-top:18px}
+			.segment-name{font-size:17px;font-weight:650;line-height:1.35;color:#f0f3f8;max-width:360px}
+			.segment-description{font-size:9px;color:#92a5ba;line-height:1.6;margin-top:7px}
+			.attributes{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+			.attribute{font-size:8px;color:#c8d4e1;padding:7px 9px;background:rgba(37,57,79,.8);border:1px solid rgba(132,158,183,.2);border-radius:5px}
+			.attribute strong{color:#e2c17c;font-weight:600}
+			.risk-circle{width:133px;height:133px;border-radius:50%;border:7px solid rgba(216,164,105,.18);border-top-color:#d8a469;border-right-color:#d8a469;border-bottom-color:#d8a469;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 30px rgba(210,155,93,.08);margin:auto}
+			.risk-value{font-size:29px;font-weight:700;color:#e6b77e;letter-spacing:-1px}
+			.risk-label{font-size:8px;color:#9aacc0;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+			.profile-foot{font-size:8px;color:#8196ab;margin-top:12px}
+			.comparison-body{margin-top:18px}
+			.compare-line{display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#aab9ca;margin-bottom:7px}
+			.compare-line strong{color:#e5c47e;font-size:11px}
+			.track{height:10px;background:rgba(119,144,172,.16);border-radius:10px;overflow:hidden;margin-bottom:15px}
+			.fill{height:100%;border-radius:10px}
+			.fill.segment{width:75.45%;background:linear-gradient(90deg,#c38e58,#e2b678)}
+			.fill.overall{width:26.54%;background:linear-gradient(90deg,#5788b1,#83b6dc)}
+			.gap-card{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}
+			.gap-stat{padding:10px;background:rgba(30,49,70,.65);border:1px solid rgba(128,153,179,.17);border-radius:7px}
+			.gap-number{font-size:17px;color:#e3bd7a;font-weight:650}
+			.gap-caption{font-size:8px;color:#899db2;margin-top:4px}
+			.comparison-note{font-size:8px;color:#8397ac;line-height:1.5;margin-top:9px}
+			.segment-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+			.stat{padding:12px;background:rgba(28,47,68,.7);border:1px solid rgba(127,153,180,.17);border-radius:8px}
+			.stat-label{font-size:8px;color:#92a6bb;text-transform:uppercase;letter-spacing:.7px}
+			.stat-value{font-size:21px;color:#edf2fa;font-weight:650;margin-top:7px}
+			.stat-foot{font-size:8px;color:#8094a9;margin-top:4px}
+			.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+			.action-card{padding:12px 13px;border:1px solid rgba(127,153,180,.17);border-radius:8px;background:rgba(28,47,68,.65);min-width:0}
+			.action-number{font-size:8px;color:#d2b16e;letter-spacing:1px}
+			.action-title{font-size:10px;font-weight:650;color:#e6edf6;margin-top:6px}
+			.action-description{font-size:8px;color:#94a7ba;line-height:1.55;margin-top:5px}
+			.navigation{height:43px;display:grid;grid-template-columns:repeat(5,1fr);gap:9px;position:relative;z-index:1;margin-top:12px}
+			.nav-card{display:flex;align-items:center;justify-content:center;border:1px solid rgba(123,150,179,.18);background:rgba(17,34,53,.65);border-radius:8px;color:#aebed0;font-size:9px;letter-spacing:.2px}
+			.nav-card.active{border-color:rgba(208,174,104,.65);background:rgba(126,95,43,.17);color:#e6c77e}
+			.footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px;position:relative;z-index:1;color:#657991;font-size:8px;letter-spacing:.6px}
+			.footer-scope{color:#a9bbcd;letter-spacing:1px}
+			</style>"
+			
+			RETURN
+			    CSS
+			        & "<div class='shell'>"
+			        & "<div class='grid'></div>"
+			
+			        & "<header class='topbar'>"
+			        & "<div class='brand'>"
+			        & "<div class='logo'>C</div>"
+			        & "<div><div class='brand-name'>CUSTOMER CHURN INTELLIGENCE CENTRE</div>"
+			        & "<div class='brand-sub'>Customer Retention &amp; Predictive Analytics</div></div>"
+			        & "</div>"
+			        & "<div class='status'><span class='status-dot'></span> PRIORITY RISK ANALYSIS</div>"
+			        & "</header>"
+			
+			        & "<div class='slicer-space'></div>"
+			
+			        & "<section class='heading'>"
+			        & "<div><div class='eyebrow'>03 / Risk Segmentation</div>"
+			        & "<h1>Where Churn Risk <span class='gold'>Concentrates.</span></h1></div>"
+			        & "<div class='heading-note'>A focused examination of the highest-risk customer profile identified in the Python segmentation analysis.</div>"
+			        & "</section>"
+			
+			        & "<main class='main-grid'>"
+			
+			        & "<section class='panel profile'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Priority High-Risk Customer Profile</div>"
+			        & "<div class='panel-subtitle'>Identified from the full-dataset Python analysis</div></div>"
+			        & "<div class='panel-tag'>PYTHON FINDING</div>"
+			        & "</div>"
+			        & "<div class='profile-body'>"
+			        & "<div>"
+			        & "<div class='segment-name'>Month-to-Month · New Fiber Customers</div>"
+			        & "<div class='segment-description'>Customers combining short tenure, flexible contracts, fiber optic internet and electronic check payments.</div>"
+			        & "<div class='attributes'>"
+			        & "<div class='attribute'><strong>Contract:</strong> Month-to-month</div>"
+			        & "<div class='attribute'><strong>Tenure:</strong> 0–6 months</div>"
+			        & "<div class='attribute'><strong>Internet:</strong> Fiber optic</div>"
+			        & "<div class='attribute'><strong>Payment:</strong> Electronic check</div>"
+			        & "</div>"
+			        & "</div>"
+			        & "<div class='risk-circle'>"
+			        & "<div class='risk-value'>75.45%</div>"
+			        & "<div class='risk-label'>Segment churn rate</div>"
+			        & "</div>"
+			        & "</div>"
+			        & "<div class='profile-foot'>Static Python result · 440 customers in the original full-dataset segment</div>"
+			        & "</section>"
+			
+			        & "<section class='panel comparison'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Risk vs Overall Churn</div>"
+			        & "<div class='panel-subtitle'>Full-dataset benchmark comparison</div></div>"
+			        & "<div class='panel-tag'>BENCHMARK</div>"
+			        & "</div>"
+			        & "<div class='comparison-body'>"
+			        & "<div class='compare-line'><span>Priority segment</span><strong>75.45%</strong></div>"
+			        & "<div class='track'><div class='fill segment'></div></div>"
+			        & "<div class='compare-line'><span>Overall dataset</span><strong>26.54%</strong></div>"
+			        & "<div class='track'><div class='fill overall'></div></div>"
+			        & "<div class='gap-card'>"
+			        & "<div class='gap-stat'><div class='gap-number'>+48.92 pp</div><div class='gap-caption'>Above overall churn rate</div></div>"
+			        & "<div class='gap-stat'><div class='gap-number'>"
+			        & FORMAT ( RiskMultiple, "0.00" )
+			        & "×</div><div class='gap-caption'>Overall churn rate multiple</div></div>"
+			        & "</div>"
+			        & "<div class='comparison-note'>The segment rate is approximately 2.84 times the overall churn rate. This is an observed historical segment comparison, not an individual prediction.</div>"
+			        & "</div>"
+			        & "</section>"
+			
+			        & "<section class='panel actions'>"
+			        & "<div class='panel-head'>"
+			        & "<div><div class='panel-title'>Retention Intervention Priorities</div>"
+			        & "<div class='panel-subtitle'>Suggested actions informed by the segment's observed characteristics</div></div>"
+			        & "<div class='panel-tag'>BUSINESS RESPONSE</div>"
+			        & "</div>"
+			        & "<div class='action-grid'>"
+			        & "<div class='action-card'><div class='action-number'>01 / EARLY ENGAGEMENT</div><div class='action-title'>Strengthen onboarding</div><div class='action-description'>Contact new customers early, confirm installation quality and resolve initial service difficulties.</div></div>"
+			        & "<div class='action-card'><div class='action-number'>02 / SERVICE EXPERIENCE</div><div class='action-title'>Review service adoption</div><div class='action-description'>Identify customers without relevant security and support services and communicate their practical benefits.</div></div>"
+			        & "<div class='action-card'><div class='action-number'>03 / CONTRACT &amp; BILLING</div><div class='action-title'>Reduce payment friction</div><div class='action-description'>Review billing concerns and offer suitable payment options and longer-term contract value propositions.</div></div>"
+			        & "</div>"
+			        & "</section>"
+			
+			        & "</main>"
+			
+			        & "<nav class='navigation'>"
+			        & "<div class='nav-card'>Executive Overview</div>"
+			        & "<div class='nav-card'>Churn Drivers</div>"
+			        & "<div class='nav-card active'>High-Risk Segments</div>"
+			        & "<div class='nav-card'>Predictive Intelligence</div>"
+			        & "<div class='nav-card'>Retention Strategy</div>"
+			        & "</nav>"
+			
+			        & "<footer class='footer'>"
+			        & "<span>CUSTOMER CHURN ANALYTICS · RISK SEGMENTATION</span>"
+			        & "<span class='footer-scope'>FULL-DATASET PYTHON FINDING</span>"
+			        & "<span>HISTORICAL ASSOCIATION · NOT CAUSATION</span>"
+			        & "</footer>"
+			        & "</div>"
+			
+			```
+		lineageTag: a2ca3e40-4064-45af-9c58-ed9ef2c82857
+
+	measure 'HTML - Predictive Intelligence' = ```
+			
+			VAR CSS =
+			"<style>
+			*{box-sizing:border-box}
+			.canvas{width:100%;height:720px;overflow:hidden;position:relative;padding:25px 31px 17px;background:radial-gradient(ellipse at 85% 5%,rgba(54,105,155,.18),transparent 36%),linear-gradient(135deg,#081321,#101f31 58%,#0b1828);color:#edf3fa;font-family:Segoe UI,Arial,sans-serif}
+			.canvas:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(135,166,195,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(135,166,195,.13) 1px,transparent 1px);background-size:34px 34px}
+			.content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;gap:12px}
+			.header{height:48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(166,190,215,.15);padding-bottom:10px}
+			.brand{display:flex;align-items:center;gap:11px}
+			.logo{width:34px;height:34px;border:1px solid #c6a66b;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#e2c58c;font-weight:800;font-size:17px}
+			.brand-name{font-size:14px;font-weight:750;letter-spacing:.4px}
+			.brand-sub{font-size:9px;color:#91a5bb;margin-top:3px;letter-spacing:1.3px;text-transform:uppercase}
+			.status{font-size:9px;color:#a8c5d9;border:1px solid rgba(112,166,197,.3);padding:7px 11px;border-radius:20px;letter-spacing:1px}
+			.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#70c9a1;margin-right:7px;box-shadow:0 0 8px #70c9a1}
+			.hero{height:65px;display:flex;align-items:center;justify-content:space-between}
+			.eyebrow{font-size:9px;color:#d2b77f;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+			.hero h1{font-size:24px;line-height:1.1;margin:0;font-weight:650;letter-spacing:-.6px}
+			.hero p{font-size:10px;color:#91a5bb;margin:6px 0 0}
+			.hero-tag{border:1px solid rgba(203,174,119,.3);background:rgba(203,174,119,.07);padding:9px 12px;border-radius:9px;color:#dfc48e;font-size:9px;letter-spacing:1px;text-align:center}
+			.kpis{height:82px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+			.kpi{background:linear-gradient(145deg,rgba(28,49,71,.94),rgba(17,34,52,.9));border:1px solid rgba(151,178,204,.15);border-radius:11px;padding:12px 14px;position:relative;overflow:hidden}
+			.kpi:after{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:#78a9c9}
+			.kpi.gold:after{background:#d2b477}
+			.kpi.green:after{background:#6fc6a0}
+			.kpi-label{font-size:9px;color:#9aafc3;letter-spacing:1px;text-transform:uppercase}
+			.kpi-value{font-size:23px;font-weight:700;margin-top:7px;letter-spacing:-.5px}
+			.kpi-note{font-size:9px;color:#8198ae;margin-top:2px}
+			.main{height:350px;display:grid;grid-template-columns: .94fr 1.06fr;gap:12px;min-height:0}
+			.panel{background:linear-gradient(145deg,rgba(23,42,62,.96),rgba(15,30,47,.96));border:1px solid rgba(151,178,204,.16);border-radius:12px;padding:15px 17px;min-width:0;overflow:hidden}
+			.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+			.panel-title{font-size:12px;font-weight:700;letter-spacing:.2px}
+			.panel-kicker{font-size:8px;color:#8fa6bc;letter-spacing:1.1px;text-transform:uppercase}
+			.model-head{display:grid;grid-template-columns:1.45fr .75fr .75fr .65fr;gap:7px;padding:7px 8px;color:#8299af;font-size:8px;text-transform:uppercase;letter-spacing:.8px;border-bottom:1px solid rgba(151,178,204,.15)}
+			.model-row{display:grid;grid-template-columns:1.45fr .75fr .75fr .65fr;gap:7px;align-items:center;padding:12px 8px;border-bottom:1px solid rgba(151,178,204,.09);font-size:10px}
+			.model-row.best{background:rgba(104,162,194,.10);border:1px solid rgba(104,162,194,.25);border-radius:7px}
+			.model-name{font-weight:650;color:#e5edf5}
+			.model-type{font-size:8px;color:#8299af;margin-top:3px}
+			.metric{font-size:11px;font-weight:650;color:#dce8f2}
+			.metric.best-value{color:#e0c48b}
+			.best-label{display:inline-block;font-size:7px;color:#e3c98f;border:1px solid rgba(210,180,119,.35);padding:3px 5px;border-radius:4px;margin-left:5px;vertical-align:1px}
+			.matrix{margin-top:15px;padding:11px 12px;background:rgba(8,20,33,.48);border:1px solid rgba(151,178,204,.12);border-radius:9px}
+			.matrix-title{font-size:9px;color:#a8bacb;letter-spacing:1px;text-transform:uppercase;margin-bottom:9px}
+			.matrix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+			.matrix-cell{padding:8px 5px;border-radius:6px;background:rgba(109,149,180,.10);text-align:center}
+			.matrix-cell.tp{background:rgba(83,173,133,.13)}
+			.matrix-cell.fp{background:rgba(207,151,102,.12)}
+			.matrix-cell.fn{background:rgba(197,112,105,.13)}
+			.matrix-value{font-size:17px;font-weight:700}
+			.matrix-label{font-size:8px;color:#91a6ba;margin-top:3px}
+			.threshold-intro{font-size:9px;color:#92a8bc;line-height:1.45;margin:-4px 0 10px}
+			.threshold-table{width:100%;border-collapse:collapse;table-layout:fixed}
+			.threshold-table th{text-align:left;font-size:8px;color:#8299af;text-transform:uppercase;letter-spacing:.6px;padding:8px 5px;border-bottom:1px solid rgba(151,178,204,.18)}
+			.threshold-table td{font-size:10px;color:#dbe5ee;padding:10px 5px;border-bottom:1px solid rgba(151,178,204,.09)}
+			.threshold-table tr.focus{background:rgba(210,180,119,.09)}
+			.threshold-table tr.focus td:first-child{color:#e3c78d;font-weight:750}
+			.threshold-table td:first-child{font-weight:700}
+			.threshold-table td:last-child{color:#9fd5b8}
+			.threshold-note{margin-top:11px;padding:10px 11px;border-left:2px solid #d0b276;background:rgba(210,180,119,.07);border-radius:0 7px 7px 0;font-size:9px;color:#b7c6d3;line-height:1.45}
+			.bottom{height:91px;display:grid;grid-template-columns:1.35fr 1fr;gap:12px}
+			.insight{border:1px solid rgba(112,166,197,.19);background:linear-gradient(110deg,rgba(39,72,94,.35),rgba(19,39,57,.55));border-radius:10px;padding:12px 15px}
+			.insight-title{font-size:9px;color:#d5bd8b;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px}
+			.insight-text{font-size:10px;color:#c3d1dd;line-height:1.5}
+			.insight-text strong{color:#f0f4f8}
+			.nav{display:flex;flex-direction:column;justify-content:space-between}
+			.nav-label{font-size:8px;color:#718ba3;letter-spacing:1.3px;text-transform:uppercase;margin:2px 0 7px}
+			.nav-items{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+			.nav-item{padding:9px 5px;border:1px solid rgba(151,178,204,.12);border-radius:7px;text-align:center;color:#8198ae;font-size:8px;line-height:1.3}
+			.nav-item.active{background:rgba(106,157,190,.14);border-color:rgba(123,177,207,.42);color:#dceaf4}
+			.footer{display:flex;justify-content:space-between;font-size:8px;color:#71869b;letter-spacing:.5px;padding-top:7px;border-top:1px solid rgba(151,178,204,.12)}
+			</style>"
+			
+			VAR ModelRows =
+			"<div class='model-head'><span>MODEL</span><span>ACCURACY</span><span>AUC</span><span>F1</span></div>
+			<div class='model-row best'><div><div class='model-name'>Baseline Logistic Regression <span class='best-label'>BEST TESTED</span></div><div class='model-type'>Full selected feature set</div></div><div class='metric best-value'>80.55%</div><div class='metric'>84.19%</div><div class='metric'>60.40%</div></div>
+			<div class='model-row'><div><div class='model-name'>Refined Logistic Regression</div><div class='model-type'>Refined feature set</div></div><div class='metric'>79.77%</div><div class='metric'>83.91%</div><div class='metric'>59.11%</div></div>
+			<div class='model-row'><div><div class='model-name'>Reduced-Service Model</div><div class='model-type'>Reduced service features</div></div><div class='metric'>79.06%</div><div class='metric'>83.59%</div><div class='metric'>57.31%</div></div>"
+			
+			VAR ThresholdRows =
+			"<table class='threshold-table'>
+			<thead><tr><th style='width:14%'>Threshold</th><th>Flagged</th><th>Captured</th><th>Missed</th><th>Unnecessary</th><th>Capture</th></tr></thead>
+			<tbody>
+			<tr><td>0.30</td><td>543</td><td>282</td><td>92</td><td>261</td><td>75.40%</td></tr>
+			<tr><td>0.40</td><td>439</td><td>250</td><td>124</td><td>189</td><td>66.84%</td></tr>
+			<tr class='focus'><td>0.50</td><td>318</td><td>209</td><td>165</td><td>109</td><td>55.88%</td></tr>
+			<tr><td>0.60</td><td>209</td><td>150</td><td>224</td><td>59</td><td>40.11%</td></tr>
+			</tbody></table>"
+			
+			RETURN
+			CSS &
+			"<div class='canvas'><div class='content'>
+			<div class='header'>
+			<div class='brand'><div class='logo'>C</div><div><div class='brand-name'>CUSTOMER CHURN INTELLIGENCE CENTRE</div><div class='brand-sub'>Customer Retention &amp; Predictive Analytics</div></div></div>
+			<div class='status'><i></i>MODEL EVALUATION · PYTHON RESULTS</div>
+			</div>
+			<div class='hero'>
+			<div><div class='eyebrow'>04 / Predictive Intelligence</div><h1>Turning Churn Risk into Predictive Signals.</h1><p>Model performance, classification trade-offs and customer targeting scenarios.</p></div>
+			<div class='hero-tag'>HELD-OUT TEST SET<br/><strong>BASELINE MODEL</strong></div>
+			</div>
+			<div class='kpis'>
+			<div class='kpi gold'><div class='kpi-label'>Accuracy</div><div class='kpi-value'>80.55%</div><div class='kpi-note'>Correct classifications</div></div>
+			<div class='kpi'><div class='kpi-label'>ROC-AUC</div><div class='kpi-value'>84.19%</div><div class='kpi-note'>Ranking discrimination</div></div>
+			<div class='kpi'><div class='kpi-label'>Precision</div><div class='kpi-value'>65.72%</div><div class='kpi-note'>Flagged customers who churned</div></div>
+			<div class='kpi green'><div class='kpi-label'>Recall</div><div class='kpi-value'>55.88%</div><div class='kpi-note'>Churners successfully captured</div></div>
+			<div class='kpi'><div class='kpi-label'>F1-score</div><div class='kpi-value'>60.40%</div><div class='kpi-note'>Precision–recall balance</div></div>
+			</div>
+			<div class='main'>
+			<div class='panel'>
+			<div class='panel-head'><div class='panel-title'>Three-Model Performance</div><div class='panel-kicker'>Test-set comparison</div></div>"
+			& ModelRows &
+			"<div class='matrix'>
+			<div class='matrix-title'>Baseline confusion matrix · threshold 0.50</div>
+			<div class='matrix-grid'>
+			<div class='matrix-cell'><div class='matrix-value'>926</div><div class='matrix-label'>True negatives</div></div>
+			<div class='matrix-cell fp'><div class='matrix-value'>109</div><div class='matrix-label'>False positives</div></div>
+			<div class='matrix-cell fn'><div class='matrix-value'>165</div><div class='matrix-label'>False negatives</div></div>
+			<div class='matrix-cell tp'><div class='matrix-value'>209</div><div class='matrix-label'>True positives</div></div>
+			</div></div>
+			</div>
+			<div class='panel'>
+			<div class='panel-head'><div class='panel-title'>Prediction Threshold Trade-off</div><div class='panel-kicker'>Baseline Logistic Regression</div></div>
+			<div class='threshold-intro'>Lower thresholds capture more churners but flag more customers who would otherwise stay. Higher thresholds reduce contact volume but miss more churners.</div>"
+			& ThresholdRows &
+			"<div class='threshold-note'><strong>How to read this:</strong> Captured = churners correctly flagged. Missed = churners not flagged. Unnecessary = non-churners flagged. Capture rate is the share of actual churners identified.</div>
+			</div>
+			</div>
+			<div class='bottom'>
+			<div class='insight'><div class='insight-title'>What the model results tell us</div><div class='insight-text'>The baseline model performed best among the three tested versions. At the <strong>0.30 threshold</strong>, it captures 75.40% of test-set churners, but creates 261 unnecessary contacts. At <strong>0.50</strong>, it captures 55.88% with 109 unnecessary contacts. The right choice depends on intervention capacity and campaign economics.</div></div>
+			<div class='nav'><div><div class='nav-label'>Intelligence workflow</div><div class='nav-items'><div class='nav-item'>Executive<br/>Overview</div><div class='nav-item'>Churn<br/>Drivers</div><div class='nav-item'>High-Risk<br/>Segments</div><div class='nav-item active'>Predictive<br/>Intelligence</div><div class='nav-item'>Retention<br/>Strategy</div></div></div><div class='footer'><span>MODEL RESULTS · STATIC PYTHON TEST OUTPUT</span><span>NOT A LIVE PREDICTION SERVICE</span></div></div>
+			</div>
+			</div></div>"
+			
+			```
+		lineageTag: 8f0d961f-8125-45f0-9e44-a0aebc2ecfc3
+
+	measure 'HTML - Retention Strategy' = ```
+			
+			VAR CSS =
+			"<style>
+			*{box-sizing:border-box}
+			.canvas{width:100%;height:720px;overflow:hidden;position:relative;padding:25px 31px 17px;background:radial-gradient(ellipse at 85% 5%,rgba(54,105,155,.18),transparent 36%),linear-gradient(135deg,#081321,#101f31 58%,#0b1828);color:#edf3fa;font-family:Segoe UI,Arial,sans-serif}
+			.canvas:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(135,166,195,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(135,166,195,.13) 1px,transparent 1px);background-size:34px 34px}
+			.content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;gap:12px}
+			.header{height:48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(166,190,215,.15);padding-bottom:10px}
+			.brand{display:flex;align-items:center;gap:11px}
+			.logo{width:34px;height:34px;border:1px solid #c6a66b;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#e2c58c;font-weight:800;font-size:17px}
+			.brand-name{font-size:14px;font-weight:750;letter-spacing:.4px}
+			.brand-sub{font-size:9px;color:#91a5bb;margin-top:3px;letter-spacing:1.3px;text-transform:uppercase}
+			.status{font-size:9px;color:#a8c5d9;border:1px solid rgba(112,166,197,.3);padding:7px 11px;border-radius:20px;letter-spacing:1px}
+			.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#70c9a1;margin-right:7px;box-shadow:0 0 8px #70c9a1}
+			.hero{height:65px;display:flex;align-items:center;justify-content:space-between}
+			.eyebrow{font-size:9px;color:#d2b77f;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+			.hero h1{font-size:24px;line-height:1.1;margin:0;font-weight:650;letter-spacing:-.6px}
+			.hero p{font-size:10px;color:#91a5bb;margin:6px 0 0}
+			.hero-tag{border:1px solid rgba(203,174,119,.3);background:rgba(203,174,119,.07);padding:9px 12px;border-radius:9px;color:#dfc48e;font-size:9px;letter-spacing:1px;text-align:center}
+			.section-label{font-size:9px;color:#d2b77f;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+			.priority-grid{height:135px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+			.priority{background:linear-gradient(145deg,rgba(28,49,71,.94),rgba(17,34,52,.9));border:1px solid rgba(151,178,204,.15);border-radius:10px;padding:12px 14px;position:relative;overflow:hidden}
+			.priority:before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:#d2b477}
+			.priority.blue:before{background:#78a9c9}
+			.priority.green:before{background:#6fc6a0}
+			.priority-title{font-size:11px;font-weight:700;margin-bottom:5px}
+			.priority-rate{font-size:22px;font-weight:750;letter-spacing:-.4px;color:#e5c98f}
+			.priority-desc{font-size:9px;color:#a0b3c5;line-height:1.45;margin-top:5px}
+			.priority-tag{display:inline-block;font-size:8px;color:#a9c7da;background:rgba(107,160,193,.10);border:1px solid rgba(107,160,193,.2);padding:3px 6px;border-radius:4px;margin-top:7px}
+			.actions{height:180px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+			.action{background:linear-gradient(145deg,rgba(23,42,62,.96),rgba(15,30,47,.96));border:1px solid rgba(151,178,204,.16);border-radius:10px;padding:13px 12px;min-width:0}
+			.action-no{font-size:9px;color:#d5b97e;letter-spacing:1.3px;margin-bottom:9px}
+			.action-title{font-size:11px;font-weight:700;line-height:1.35;margin-bottom:7px}
+			.action-text{font-size:9px;color:#a6b8c9;line-height:1.5}
+			.action-kpi{margin-top:10px;padding-top:8px;border-top:1px solid rgba(151,178,204,.12);font-size:8px;color:#8fb5ca;line-height:1.4}
+			.bottom{height:155px;display:grid;grid-template-columns:1.05fr .95fr;gap:12px}
+			.panel{background:linear-gradient(145deg,rgba(23,42,62,.96),rgba(15,30,47,.96));border:1px solid rgba(151,178,204,.16);border-radius:10px;padding:13px 15px;overflow:hidden}
+			.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+			.panel-title{font-size:11px;font-weight:700}
+			.panel-kicker{font-size:8px;color:#8fa6bc;letter-spacing:1px;text-transform:uppercase}
+			.policy-table{width:100%;border-collapse:collapse;table-layout:fixed}
+			.policy-table th{text-align:left;font-size:8px;color:#8299af;text-transform:uppercase;letter-spacing:.5px;padding:6px 5px;border-bottom:1px solid rgba(151,178,204,.18)}
+			.policy-table td{font-size:9px;color:#dbe5ee;padding:7px 5px;border-bottom:1px solid rgba(151,178,204,.08)}
+			.policy-table tr.focus{background:rgba(210,180,119,.09)}
+			.policy-table tr.focus td:first-child{color:#e3c78d;font-weight:750}
+			.policy-table td:first-child{font-weight:700}
+			.measure-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+			.measure{background:rgba(8,20,33,.42);border:1px solid rgba(151,178,204,.11);border-radius:7px;padding:8px 9px}
+			.measure-name{font-size:9px;font-weight:650;color:#dce7f0}
+			.measure-desc{font-size:8px;color:#8fa5b9;margin-top:4px;line-height:1.35}
+			.footer{height:25px;display:flex;justify-content:space-between;align-items:center;font-size:8px;color:#71869b;letter-spacing:.5px;border-top:1px solid rgba(151,178,204,.12);padding-top:7px}
+			</style>"
+			
+			VAR ThresholdPolicy =
+			"<table class='policy-table'>
+			<thead><tr><th>Threshold</th><th>Flagged</th><th>Churners captured</th><th>Unnecessary contacts</th></tr></thead>
+			<tbody>
+			<tr><td>0.30</td><td>543</td><td>282 (75.40%)</td><td>261</td></tr>
+			<tr><td>0.40</td><td>439</td><td>250 (66.84%)</td><td>189</td></tr>
+			<tr class='focus'><td>0.50</td><td>318</td><td>209 (55.88%)</td><td>109</td></tr>
+			<tr><td>0.60</td><td>209</td><td>150 (40.11%)</td><td>59</td></tr>
+			</tbody></table>"
+			
+			VAR MeasurementFramework =
+			"<div class='measure-list'>
+			<div class='measure'><div class='measure-name'>Retention / Save Rate</div><div class='measure-desc'>Share of contacted customers who remain after the intervention.</div></div>
+			<div class='measure'><div class='measure-name'>Churn Rate by Segment</div><div class='measure-desc'>Track churn across contract, tenure and service groups.</div></div>
+			<div class='measure'><div class='measure-name'>Cost per Retained Customer</div><div class='measure-desc'>Total intervention cost divided by customers retained.</div></div>
+			<div class='measure'><div class='measure-name'>Incremental Retention</div><div class='measure-desc'>Compare treatment outcomes with a suitable control group.</div></div>
+			</div>"
+			
+			RETURN
+			CSS &
+			"<div class='canvas'><div class='content'>
+			<div class='header'>
+			<div class='brand'><div class='logo'>C</div><div><div class='brand-name'>CUSTOMER CHURN INTELLIGENCE CENTRE</div><div class='brand-sub'>Customer Retention &amp; Predictive Analytics</div></div></div>
+			<div class='status'><i></i>STRATEGY FRAMEWORK · EVIDENCE-LED</div>
+			</div>
+			<div class='hero'>
+			<div><div class='eyebrow'>05 / Retention Strategy</div><h1>Turn Customer Risk into Retention Action.</h1><p>Prioritise vulnerable customers, coordinate interventions and measure outcomes.</p></div>
+			<div class='hero-tag'>BUSINESS OBJECTIVE<br/><strong>REDUCE AVOIDABLE CHURN</strong></div>
+			</div>
+			<div>
+			<div class='section-label'>01 / Where should retention efforts focus?</div>
+			<div class='priority-grid'>
+			<div class='priority'><div class='priority-title'>New Customers · 0–6 Months</div><div class='priority-rate'>52.94%</div><div class='priority-desc'>Highest observed churn rate across the five tenure bands.</div><div class='priority-tag'>EARLY-LIFECYCLE RISK</div></div>
+			<div class='priority blue'><div class='priority-title'>Month-to-Month Contracts</div><div class='priority-rate'>42.71%</div><div class='priority-desc'>Substantially higher churn than one-year and two-year contracts.</div><div class='priority-tag'>CONTRACT RISK</div></div>
+			<div class='priority green'><div class='priority-title'>Combined High-Risk Segment</div><div class='priority-rate'>75.45%</div><div class='priority-desc'>440 customers: month-to-month, 0–6 months, Fiber optic and electronic check.</div><div class='priority-tag'>PYTHON SEGMENT FINDING</div></div>
+			</div>
+			</div>
+			<div>
+			<div class='section-label'>02 / Recommended retention interventions</div>
+			<div class='actions'>
+			<div class='action'><div class='action-no'>PLAY 01</div><div class='action-title'>Strengthen Early Onboarding</div><div class='action-text'>Introduce welcome check-ins, setup guidance and early issue resolution during the first six months.</div><div class='action-kpi'>MONITOR: 0–6 month churn and onboarding completion</div></div>
+			<div class='action'><div class='action-no'>PLAY 02</div><div class='action-title'>Improve Service Adoption</div><div class='action-text'>Review security and technical support needs; make relevant service benefits easier to understand and access.</div><div class='action-kpi'>MONITOR: Service adoption and service-level churn</div></div>
+			<div class='action'><div class='action-no'>PLAY 03</div><div class='action-title'>Review Contract Value</div><div class='action-text'>Offer suitable longer-term plans where customer needs, affordability and contract terms support them.</div><div class='action-kpi'>MONITOR: Contract migration and subsequent churn</div></div>
+			<div class='action'><div class='action-no'>PLAY 04</div><div class='action-title'>Reduce Payment Friction</div><div class='action-text'>Review billing concerns and payment experience; offer clear payment guidance and support.</div><div class='action-kpi'>MONITOR: Payment issues and payment-method churn</div></div>
+			</div>
+			</div>
+			<div class='bottom'>
+			<div class='panel'>
+			<div class='panel-head'><div class='panel-title'>03 / Prediction-Based Contact Policy</div><div class='panel-kicker'>Test-set scenarios</div></div>"
+			& ThresholdPolicy &
+			"</div>
+			<div class='panel'>
+			<div class='panel-head'><div class='panel-title'>04 / Retention Performance Scorecard</div><div class='panel-kicker'>Future measurement plan</div></div>"
+			& MeasurementFramework &
+			"</div>
+			</div>
+			<div class='footer'><span>RECOMMENDATIONS ARE HYPOTHESES TO TEST · ASSOCIATION DOES NOT PROVE CAUSATION</span><span>CUSTOMER CHURN INTELLIGENCE CENTRE · 05 / 05</span></div>
+			</div></div>"
+			
+			```
+		lineageTag: dc171d99-33ff-4e40-84d1-a26464a009a3
+
+	measure 'HTML - Executive Overview Row' = ```
+			
+			VAR _CustomerID =
+			    SELECTEDVALUE ( 'Customer_Churn'[customerID] )
+			
+			VAR _Contract =
+			    COALESCE (
+			        SELECTEDVALUE ( 'Customer_Churn'[Contract] ),
+			        "Unknown"
+			    )
+			
+			VAR _Internet =
+			    COALESCE (
+			        SELECTEDVALUE ( 'Customer_Churn'[InternetService] ),
+			        "Unknown"
+			    )
+			
+			VAR _TenureBand =
+			    COALESCE (
+			        SELECTEDVALUE ( 'Customer_Churn'[Tenure_Band] ),
+			        "Unknown"
+			    )
+			
+			VAR _Payment =
+			    COALESCE (
+			        SELECTEDVALUE ( 'Customer_Churn'[PaymentMethod] ),
+			        "Unknown"
+			    )
+			
+			VAR _Churn =
+			    COALESCE (
+			        SELECTEDVALUE ( 'Customer_Churn'[Churn] ),
+			        "Unknown"
+			    )
+			
+			VAR _Tenure =
+			    FORMAT (
+			        COALESCE (
+			            SELECTEDVALUE ( 'Customer_Churn'[Tenure] ),
+			            0
+			        ),
+			        "0",
+			        "en-US"
+			    )
+			
+			VAR _MonthlyCharges =
+			    FORMAT (
+			        COALESCE (
+			            SELECTEDVALUE ( 'Customer_Churn'[MonthlyCharges] ),
+			            0
+			        ),
+			        "0.00",
+			        "en-US"
+			    )
+			
+			VAR _SafeContract =
+			    SUBSTITUTE (
+			        SUBSTITUTE ( _Contract, "&", "&amp;" ),
+			        "'", "&#39;"
+			    )
+			
+			VAR _SafeInternet =
+			    SUBSTITUTE (
+			        SUBSTITUTE ( _Internet, "&", "&amp;" ),
+			        "'", "&#39;"
+			    )
+			
+			VAR _SafeTenureBand =
+			    SUBSTITUTE (
+			        SUBSTITUTE ( _TenureBand, "&", "&amp;" ),
+			        "'", "&#39;"
+			    )
+			
+			VAR _SafePayment =
+			    SUBSTITUTE (
+			        SUBSTITUTE ( _Payment, "&", "&amp;" ),
+			        "'", "&#39;"
+			    )
+			
+			RETURN
+			    IF (
+			        ISBLANK ( _CustomerID ),
+			        BLANK (),
+			        "<div class='customer-row'"
+			            & " data-customer='" & _CustomerID & "'"
+			            & " data-contract='" & _SafeContract & "'"
+			            & " data-internet='" & _SafeInternet & "'"
+			            & " data-tenure-band='" & _SafeTenureBand & "'"
+			            & " data-payment='" & _SafePayment & "'"
+			            & " data-churn='" & _Churn & "'"
+			            & " data-tenure='" & _Tenure & "'"
+			            & " data-monthly-charges='" & _MonthlyCharges & "'"
+			            & "></div>"
+			    )
+			
+			```
+		lineageTag: 2d47717d-1309-43e7-8d66-673ec2c5d5f8
+
 	column Value
 		isHidden
 		lineageTag: 97c88a4a-8af6-4965-8b01-e4de78c7fd2e

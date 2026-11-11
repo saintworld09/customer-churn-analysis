@@ -76,11 +76,6 @@
           "type": "Image"
         },
         {
-          "name": "POWERPOINT209799167532502462.png",
-          "path": "POWERPOINT209799167532502462.png",
-          "type": "Image"
-        },
-        {
           "name": "under_design20395932857930853.png",
           "path": "under_design20395932857930853.png",
           "type": "Image"
@@ -89,6 +84,17 @@
           "name": "UNDER_DESIGN39645854965144304.png",
           "path": "UNDER_DESIGN39645854965144304.png",
           "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "STANDALONEhtmlContent443BE3AD55E043BF878BED274D3A6855",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "STANDALONEhtmlContent443BE3AD55E043BF878BED274D3A6855.pbiviz.json",
+          "path": "STANDALONEhtmlContent443BE3AD55E043BF878BED274D3A6855.pbiviz.json",
+          "type": "CustomVisualMetadata"
         }
       ]
     }

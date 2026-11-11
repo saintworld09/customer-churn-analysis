@@ -222,7 +222,8 @@ def cramers_v(x, y):
 
     # Chi-square statistic
     chi2 = chi2_contingency(
-        confusion_matrix
+        confusion_matrix,
+        correction=False
     )[0]
 
     # Total number of observations

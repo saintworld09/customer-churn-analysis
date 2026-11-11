@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "24adc96885da6587e710",
-  "displayName": "Churn Drivers",
+  "displayName": "Drivers",
   "displayOption": "FitToPage",
   "height": 2200,
   "width": 2500,

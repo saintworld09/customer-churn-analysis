@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Nav Objects",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "e7a33dc61ac38e1272e0",
-  "displayName": "Executive Overview",
+  "displayName": "Exco Summary ",
   "displayOption": "FitToPage",
   "height": 1900,
   "width": 2200,

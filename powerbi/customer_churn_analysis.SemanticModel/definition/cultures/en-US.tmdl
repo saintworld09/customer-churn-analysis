@@ -7946,9 +7946,2048 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "measure_table.churn_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "Churn Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "churn color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "churn hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "churn tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.churn_indicator": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "Churn Indicator"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "churn indicator": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "indicator": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "churn pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "churn needle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn gage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn gauge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn dial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn meter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "churn display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "needle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.HTML__executive_overview": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "HTML - Executive Overview"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HTML - executive overview": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML executive overview": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "overview": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "executive overview": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "html - executive impression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - executive indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - executive synopsis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - executive gestalt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html executive impression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html executive indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html executive synopsis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html executive gestalt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "executive impression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "executive indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.DAX_syntax_test": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "DAX Syntax Test"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DAX syntax test": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "test": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "syntax test": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dax syntax examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dax syntax exam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dax syntax assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dax syntax investigation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dax syntax analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "syntax examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "syntax exam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "syntax assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "syntax investigation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "syntax analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.HTML__churn_drivers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "HTML - Churn Drivers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HTML - churn drivers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML churn drivers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "drivers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "churn drivers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "html - churn motorist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html churn motorist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "churn motorist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "html - churn chauffeur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "html churn chauffeur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "motorist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "html - churn teamster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "html - churn carter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "html - churn charioteer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "html - churn handler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.HTML__highrisk_segments": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "HTML - High-Risk Segments"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HTML - high-risk segments": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML high risk segments": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "segments": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk segments": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high risk segments": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.HTML__predictive_intelligence": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "HTML - Predictive Intelligence"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HTML - predictive intelligence": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML predictive intelligence": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "html - predictive intellect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - predictive acumen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - predictive aptitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - predictive astuteness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - predictive cleverness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - predictive brainpower": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html predictive intellect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html predictive acumen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html predictive aptitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html predictive astuteness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.HTML__retention_strategy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "HTML - Retention Strategy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HTML - retention strategy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML retention strategy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "strategy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "retention strategy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "html - retention policy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - retention tactic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html - retention stratagem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "html retention policy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html retention tactic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "html retention stratagem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "retention policy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "retention tactic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "retention stratagem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "html - retention plan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.HTML__executive_overview_row": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure_Table",
+			          "ConceptualProperty": "HTML - Executive Overview Row"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HTML - executive overview row": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML executive overview row": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "row": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "overview row": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "executive overview row": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "html - executive overview line": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "html executive overview line": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "executive overview line": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "overview line": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "churn_association_has_measure_table_HTML__churn_drivers": {
+			      "Binding": {
+			        "ConceptualEntity": "churn_association"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "churn_association": {
+			          "Target": {
+			            "Entity": "churn_association"
+			          }
+			        },
+			        "measure_table.HTML__churn_drivers": {
+			          "Target": {
+			            "Entity": "measure_table.HTML__churn_drivers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "churn_association"
+			            },
+			            "Object": {
+			              "Role": "measure_table.HTML__churn_drivers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "churn_associations_have_HTML__churn_drivers"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "measure_table.HTML__churn_drivers"
+			            },
+			            "Verbs": [
+			              {
+			                "drive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "churn_association"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "HTML__churn_drivers_drive_churn_associations"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table.HTML__churn_drivers"
+			            },
+			            "Object": {
+			              "Role": "churn_association"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "HTML__churn_drivers_have_churn_associations"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_HTML__churn_drivers": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.HTML__churn_drivers": {
+			          "Target": {
+			            "Entity": "measure_table.HTML__churn_drivers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.HTML__churn_drivers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_HTML__churn_drivers"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "measure_table.HTML__churn_drivers"
+			            },
+			            "Verbs": [
+			              {
+			                "drive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "customer_churn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "HTML__churn_drivers_drive_customer_churns"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table.HTML__churn_drivers"
+			            },
+			            "Object": {
+			              "Role": "customer_churn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "HTML__churn_drivers_have_customer_churns"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_DAX_syntax_test": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.DAX_syntax_test": {
+			          "Target": {
+			            "Entity": "measure_table.DAX_syntax_test"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.DAX_syntax_test"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_DAX_syntax_test"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_HTML__executive_overview": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.HTML__executive_overview": {
+			          "Target": {
+			            "Entity": "measure_table.HTML__executive_overview"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.HTML__executive_overview"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_HTML__executive_overview"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_churn_indicator": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.churn_indicator": {
+			          "Target": {
+			            "Entity": "measure_table.churn_indicator"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.churn_indicator"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_churn_indicator"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "measure_table.churn_indicator"
+			            },
+			            "Verbs": [
+			              {
+			                "indicate": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "customer_churn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "churn_indicator_indicate_customer_churns"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table.churn_indicator"
+			            },
+			            "Object": {
+			              "Role": "customer_churn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "churn_indicator_have_customer_churns"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_churn_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.churn_color": {
+			          "Target": {
+			            "Entity": "measure_table.churn_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.churn_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_churn_color"
+			        }
+			      ]
+			    },
+			    "service_churn_comparison_has_service": {
+			      "Binding": {
+			        "ConceptualEntity": "Service Churn Comparison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "service_churn_comparison": {
+			          "Target": {
+			            "Entity": "service_churn_comparison"
+			          }
+			        },
+			        "service_churn_comparison.service": {
+			          "Target": {
+			            "Entity": "service_churn_comparison.service"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "service_churn_comparison"
+			            },
+			            "Object": {
+			              "Role": "service_churn_comparison.service"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "service_churn_comparisons_have_services"
+			        }
+			      ]
+			    },
+			    "support_protection_service_has_service_status": {
+			      "Binding": {
+			        "ConceptualEntity": "Support_Protection_Services"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "support_protection_service": {
+			          "Target": {
+			            "Entity": "support_protection_service"
+			          }
+			        },
+			        "support_protection_service.service_status": {
+			          "Target": {
+			            "Entity": "support_protection_service.service_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "support_protection_service"
+			            },
+			            "Object": {
+			              "Role": "support_protection_service.service_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "support_protection_services_have_service_statuses"
+			        }
+			      ]
+			    },
+			    "support_protection_service_has_service": {
+			      "Binding": {
+			        "ConceptualEntity": "Support_Protection_Services"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "support_protection_service": {
+			          "Target": {
+			            "Entity": "support_protection_service"
+			          }
+			        },
+			        "support_protection_service.service": {
+			          "Target": {
+			            "Entity": "support_protection_service.service"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "support_protection_service"
+			            },
+			            "Object": {
+			              "Role": "support_protection_service.service"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "support_protection_services_have_services"
+			        }
+			      ]
+			    },
+			    "support_protection_service_has_churn": {
+			      "Binding": {
+			        "ConceptualEntity": "Support_Protection_Services"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "support_protection_service": {
+			          "Target": {
+			            "Entity": "support_protection_service"
+			          }
+			        },
+			        "support_protection_service.churn": {
+			          "Target": {
+			            "Entity": "support_protection_service.churn"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "support_protection_service"
+			            },
+			            "Object": {
+			              "Role": "support_protection_service.churn"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "support_protection_services_have_churns"
+			        }
+			      ]
+			    },
+			    "service_churn_comparison_has_measure_table_service_churn__no": {
+			      "Binding": {
+			        "ConceptualEntity": "Service Churn Comparison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "service_churn_comparison": {
+			          "Target": {
+			            "Entity": "service_churn_comparison"
+			          }
+			        },
+			        "measure_table.service_churn__no": {
+			          "Target": {
+			            "Entity": "measure_table.service_churn__no"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "service_churn_comparison"
+			            },
+			            "Object": {
+			              "Role": "measure_table.service_churn__no"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "service_churn_comparisons_have_service_churn__no"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_service_churn__no": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.service_churn__no": {
+			          "Target": {
+			            "Entity": "measure_table.service_churn__no"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.service_churn__no"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_service_churn__no"
+			        }
+			      ]
+			    },
+			    "service_churn_comparison_has_measure_table_service_churn__yes": {
+			      "Binding": {
+			        "ConceptualEntity": "Service Churn Comparison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "service_churn_comparison": {
+			          "Target": {
+			            "Entity": "service_churn_comparison"
+			          }
+			        },
+			        "measure_table.service_churn__yes": {
+			          "Target": {
+			            "Entity": "measure_table.service_churn__yes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "service_churn_comparison"
+			            },
+			            "Object": {
+			              "Role": "measure_table.service_churn__yes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "service_churn_comparisons_have_service_churn__yes"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_service_churn__yes": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.service_churn__yes": {
+			          "Target": {
+			            "Entity": "measure_table.service_churn__yes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.service_churn__yes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_service_churn__yes"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_device_protection_churn_gap": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.device_protection_churn_gap": {
+			          "Target": {
+			            "Entity": "measure_table.device_protection_churn_gap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.device_protection_churn_gap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_device_protection_churn_gap"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_online_backup_churn_gap": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.online_backup_churn_gap": {
+			          "Target": {
+			            "Entity": "measure_table.online_backup_churn_gap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.online_backup_churn_gap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_online_backup_churn_gap"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_tech_support_churn_gap": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.tech_support_churn_gap": {
+			          "Target": {
+			            "Entity": "measure_table.tech_support_churn_gap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.tech_support_churn_gap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_tech_support_churn_gap"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_online_security_churn_gap": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.online_security_churn_gap": {
+			          "Target": {
+			            "Entity": "measure_table.online_security_churn_gap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.online_security_churn_gap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_online_security_churn_gap"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_device_protection_yes_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.device_protection_yes_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.device_protection_yes_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.device_protection_yes_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_device_protection_yes_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_device_protection_no_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.device_protection_no_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.device_protection_no_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.device_protection_no_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_device_protection_no_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_online_backup_yes_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.online_backup_yes_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.online_backup_yes_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.online_backup_yes_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_online_backup_yes_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_online_backup_no_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.online_backup_no_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.online_backup_no_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.online_backup_no_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_online_backup_no_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_tech_support_yes_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.tech_support_yes_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.tech_support_yes_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.tech_support_yes_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_tech_support_yes_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_tech_support_no_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.tech_support_no_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.tech_support_no_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.tech_support_no_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_tech_support_no_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_online_security_yes_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.online_security_yes_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.online_security_yes_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.online_security_yes_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_online_security_yes_churn_rate"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_online_security_no_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Customer_Churn"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer_churn": {
+			          "Target": {
+			            "Entity": "customer_churn"
+			          }
+			        },
+			        "measure_table.online_security_no_churn_rate": {
+			          "Target": {
+			            "Entity": "measure_table.online_security_no_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer_churn"
+			            },
+			            "Object": {
+			              "Role": "measure_table.online_security_no_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_churns_have_online_security_no_churn_rate"
+			        }
+			      ]
+			    },
+			    "churn_association_has_measure_table_cramers_v_value": {
+			      "Binding": {
+			        "ConceptualEntity": "churn_association"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "churn_association": {
+			          "Target": {
+			            "Entity": "churn_association"
+			          }
+			        },
+			        "measure_table.cramers_v_value": {
+			          "Target": {
+			            "Entity": "measure_table.cramers_v_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "churn_association"
+			            },
+			            "Object": {
+			              "Role": "measure_table.cramers_v_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "churn_associations_have_cramers_v_value"
+			        }
+			      ]
+			    },
+			    "churn_association_has_association_strength": {
+			      "Binding": {
+			        "ConceptualEntity": "churn_association"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "churn_association": {
+			          "Target": {
+			            "Entity": "churn_association"
+			          }
+			        },
+			        "churn_association.association_strength": {
+			          "Target": {
+			            "Entity": "churn_association.association_strength"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "churn_association"
+			            },
+			            "Object": {
+			              "Role": "churn_association.association_strength"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "churn_associations_have_association_strengths"
+			        }
+			      ]
+			    },
 			    "churn_association_has_cramer_V": {
 			      "Binding": {
 			        "ConceptualEntity": "churn_association"
@@ -9480,20 +11519,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "churn_association_has_association_strength": {
+			    "measure_table_has_HTML__highrisk_segments": {
 			      "Binding": {
-			        "ConceptualEntity": "churn_association"
+			        "ConceptualEntity": "Measure_Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "churn_association": {
+			        "measure_table": {
 			          "Target": {
-			            "Entity": "churn_association"
+			            "Entity": "measure_table"
 			          }
 			        },
-			        "churn_association.association_strength": {
+			        "measure_table.HTML__highrisk_segments": {
 			          "Target": {
-			            "Entity": "churn_association.association_strength"
+			            "Entity": "measure_table.HTML__highrisk_segments"
 			          }
 			        }
 			      },
@@ -9501,32 +11540,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "churn_association"
+			              "Role": "measure_table"
 			            },
 			            "Object": {
-			              "Role": "churn_association.association_strength"
+			              "Role": "measure_table.HTML__highrisk_segments"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "churn_associations_have_association_strengths"
+			          "ID": "measure_tables_have_HTML__highrisk_segments"
 			        }
 			      ]
 			    },
-			    "churn_association_has_measure_table_cramers_v_value": {
+			    "measure_table_has_HTML__predictive_intelligence": {
 			      "Binding": {
-			        "ConceptualEntity": "churn_association"
+			        "ConceptualEntity": "Measure_Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "churn_association": {
+			        "measure_table": {
 			          "Target": {
-			            "Entity": "churn_association"
+			            "Entity": "measure_table"
 			          }
 			        },
-			        "measure_table.cramers_v_value": {
+			        "measure_table.HTML__predictive_intelligence": {
 			          "Target": {
-			            "Entity": "measure_table.cramers_v_value"
+			            "Entity": "measure_table.HTML__predictive_intelligence"
 			          }
 			        }
 			      },
@@ -9534,19 +11573,52 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "churn_association"
+			              "Role": "measure_table"
 			            },
 			            "Object": {
-			              "Role": "measure_table.cramers_v_value"
+			              "Role": "measure_table.HTML__predictive_intelligence"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "churn_associations_have_cramers_v_value"
+			          "ID": "measure_tables_have_HTML__predictive_intelligence"
 			        }
 			      ]
 			    },
-			    "customer_churn_has_measure_table_online_security_no_churn_rate": {
+			    "measure_table_has_HTML__retention_strategy": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure_Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.HTML__retention_strategy": {
+			          "Target": {
+			            "Entity": "measure_table.HTML__retention_strategy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.HTML__retention_strategy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_HTML__retention_strategy"
+			        }
+			      ]
+			    },
+			    "customer_churn_has_measure_table_HTML__executive_overview_row": {
 			      "Binding": {
 			        "ConceptualEntity": "Customer_Churn"
 			      },
@@ -9557,9 +11629,9 @@ cultureInfo en-US
 			            "Entity": "customer_churn"
 			          }
 			        },
-			        "measure_table.online_security_no_churn_rate": {
+			        "measure_table.HTML__executive_overview_row": {
 			          "Target": {
-			            "Entity": "measure_table.online_security_no_churn_rate"
+			            "Entity": "measure_table.HTML__executive_overview_row"
 			          }
 			        }
 			      },
@@ -9570,639 +11642,12 @@ cultureInfo en-US
 			              "Role": "customer_churn"
 			            },
 			            "Object": {
-			              "Role": "measure_table.online_security_no_churn_rate"
+			              "Role": "measure_table.HTML__executive_overview_row"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "customer_churns_have_online_security_no_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_online_security_yes_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.online_security_yes_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.online_security_yes_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.online_security_yes_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_online_security_yes_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_tech_support_no_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.tech_support_no_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.tech_support_no_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.tech_support_no_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_tech_support_no_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_tech_support_yes_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.tech_support_yes_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.tech_support_yes_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.tech_support_yes_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_tech_support_yes_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_online_backup_no_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.online_backup_no_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.online_backup_no_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.online_backup_no_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_online_backup_no_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_online_backup_yes_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.online_backup_yes_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.online_backup_yes_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.online_backup_yes_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_online_backup_yes_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_device_protection_no_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.device_protection_no_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.device_protection_no_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.device_protection_no_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_device_protection_no_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_device_protection_yes_churn_rate": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.device_protection_yes_churn_rate": {
-			          "Target": {
-			            "Entity": "measure_table.device_protection_yes_churn_rate"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.device_protection_yes_churn_rate"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_device_protection_yes_churn_rate"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_online_security_churn_gap": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.online_security_churn_gap": {
-			          "Target": {
-			            "Entity": "measure_table.online_security_churn_gap"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.online_security_churn_gap"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_online_security_churn_gap"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_tech_support_churn_gap": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.tech_support_churn_gap": {
-			          "Target": {
-			            "Entity": "measure_table.tech_support_churn_gap"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.tech_support_churn_gap"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_tech_support_churn_gap"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_online_backup_churn_gap": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.online_backup_churn_gap": {
-			          "Target": {
-			            "Entity": "measure_table.online_backup_churn_gap"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.online_backup_churn_gap"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_online_backup_churn_gap"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_device_protection_churn_gap": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.device_protection_churn_gap": {
-			          "Target": {
-			            "Entity": "measure_table.device_protection_churn_gap"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.device_protection_churn_gap"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_device_protection_churn_gap"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_service_churn__yes": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.service_churn__yes": {
-			          "Target": {
-			            "Entity": "measure_table.service_churn__yes"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.service_churn__yes"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_service_churn__yes"
-			        }
-			      ]
-			    },
-			    "service_churn_comparison_has_measure_table_service_churn__yes": {
-			      "Binding": {
-			        "ConceptualEntity": "Service Churn Comparison"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "service_churn_comparison": {
-			          "Target": {
-			            "Entity": "service_churn_comparison"
-			          }
-			        },
-			        "measure_table.service_churn__yes": {
-			          "Target": {
-			            "Entity": "measure_table.service_churn__yes"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "service_churn_comparison"
-			            },
-			            "Object": {
-			              "Role": "measure_table.service_churn__yes"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "service_churn_comparisons_have_service_churn__yes"
-			        }
-			      ]
-			    },
-			    "customer_churn_has_measure_table_service_churn__no": {
-			      "Binding": {
-			        "ConceptualEntity": "Customer_Churn"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "customer_churn": {
-			          "Target": {
-			            "Entity": "customer_churn"
-			          }
-			        },
-			        "measure_table.service_churn__no": {
-			          "Target": {
-			            "Entity": "measure_table.service_churn__no"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "customer_churn"
-			            },
-			            "Object": {
-			              "Role": "measure_table.service_churn__no"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "customer_churns_have_service_churn__no"
-			        }
-			      ]
-			    },
-			    "service_churn_comparison_has_measure_table_service_churn__no": {
-			      "Binding": {
-			        "ConceptualEntity": "Service Churn Comparison"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "service_churn_comparison": {
-			          "Target": {
-			            "Entity": "service_churn_comparison"
-			          }
-			        },
-			        "measure_table.service_churn__no": {
-			          "Target": {
-			            "Entity": "measure_table.service_churn__no"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "service_churn_comparison"
-			            },
-			            "Object": {
-			              "Role": "measure_table.service_churn__no"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "service_churn_comparisons_have_service_churn__no"
-			        }
-			      ]
-			    },
-			    "support_protection_service_has_churn": {
-			      "Binding": {
-			        "ConceptualEntity": "Support_Protection_Services"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "support_protection_service": {
-			          "Target": {
-			            "Entity": "support_protection_service"
-			          }
-			        },
-			        "support_protection_service.churn": {
-			          "Target": {
-			            "Entity": "support_protection_service.churn"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "support_protection_service"
-			            },
-			            "Object": {
-			              "Role": "support_protection_service.churn"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "support_protection_services_have_churns"
-			        }
-			      ]
-			    },
-			    "support_protection_service_has_service": {
-			      "Binding": {
-			        "ConceptualEntity": "Support_Protection_Services"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "support_protection_service": {
-			          "Target": {
-			            "Entity": "support_protection_service"
-			          }
-			        },
-			        "support_protection_service.service": {
-			          "Target": {
-			            "Entity": "support_protection_service.service"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "support_protection_service"
-			            },
-			            "Object": {
-			              "Role": "support_protection_service.service"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "support_protection_services_have_services"
-			        }
-			      ]
-			    },
-			    "support_protection_service_has_service_status": {
-			      "Binding": {
-			        "ConceptualEntity": "Support_Protection_Services"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "support_protection_service": {
-			          "Target": {
-			            "Entity": "support_protection_service"
-			          }
-			        },
-			        "support_protection_service.service_status": {
-			          "Target": {
-			            "Entity": "support_protection_service.service_status"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "support_protection_service"
-			            },
-			            "Object": {
-			              "Role": "support_protection_service.service_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "support_protection_services_have_service_statuses"
-			        }
-			      ]
-			    },
-			    "service_churn_comparison_has_service": {
-			      "Binding": {
-			        "ConceptualEntity": "Service Churn Comparison"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "service_churn_comparison": {
-			          "Target": {
-			            "Entity": "service_churn_comparison"
-			          }
-			        },
-			        "service_churn_comparison.service": {
-			          "Target": {
-			            "Entity": "service_churn_comparison.service"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "service_churn_comparison"
-			            },
-			            "Object": {
-			              "Role": "service_churn_comparison.service"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "service_churn_comparisons_have_services"
+			          "ID": "customer_churns_have_HTML__executive_overview_row"
 			        }
 			      ]
 			    },

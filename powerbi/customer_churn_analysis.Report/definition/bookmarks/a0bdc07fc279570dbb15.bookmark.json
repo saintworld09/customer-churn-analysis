@@ -3,8 +3,7 @@
   "displayName": "driver nav close",
   "name": "a0bdc07fc279570dbb15",
   "options": {
-    "targetVisualNames": [],
-    "preserveNewVisualVisibility": true
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",

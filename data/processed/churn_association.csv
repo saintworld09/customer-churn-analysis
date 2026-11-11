@@ -7,6 +7,6 @@ Rank,Driver,Cramers_V,Association_Strength
 6,PaymentMethod,0.3027,Strong
 7,OnlineBackup,0.2919,Moderate
 8,DeviceProtection,0.2811,Moderate
-9,Dependents,0.1634,Weak
-10,SeniorCitizen_Status,0.15,Weak
-11,Partner,0.1497,Weak
+9,Dependents,0.1638,Weak
+10,SeniorCitizen_Status,0.1504,Weak
+11,Partner,0.15,Weak

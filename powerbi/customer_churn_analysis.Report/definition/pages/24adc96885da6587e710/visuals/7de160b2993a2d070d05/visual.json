@@ -4,9 +4,10 @@
   "position": {
     "x": 99.196787148594382,
     "y": 0,
-    "z": 1000,
+    "z": 3000,
     "height": 1900,
-    "width": 2399.7991967871485
+    "width": 2399.7991967871485,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "Driver Nav Objects",
